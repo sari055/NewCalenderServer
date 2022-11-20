@@ -1,0 +1,35 @@
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\Repproject.Repositories\bin\Debug\net5.0\Repproject.Repositories.deps.json
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\Repproject.Repositories\bin\Debug\net5.0\Repproject.Repositories.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\Repproject.Repositories\bin\Debug\net5.0\ref\Repproject.Repositories.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\Repproject.Repositories\bin\Debug\net5.0\Repproject.Repositories.pdb
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.AssemblyInfoInputs.cache
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.AssemblyInfo.cs
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\ref\Repproject.Repositories.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.pdb
+Y:\Groups\1\כהן מנוחה\.net\RepProject\Repproject.Repositories\bin\Debug\net5.0\Repproject.Repositories.deps.json
+Y:\Groups\1\כהן מנוחה\.net\RepProject\Repproject.Repositories\bin\Debug\net5.0\Repproject.Repositories.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\Repproject.Repositories\bin\Debug\net5.0\ref\Repproject.Repositories.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\Repproject.Repositories\bin\Debug\net5.0\Repproject.Repositories.pdb
+Y:\Groups\1\כהן מנוחה\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.csproj.AssemblyReference.cache
+Y:\Groups\1\כהן מנוחה\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+Y:\Groups\1\כהן מנוחה\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.AssemblyInfoInputs.cache
+Y:\Groups\1\כהן מנוחה\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.AssemblyInfo.cs
+Y:\Groups\1\כהן מנוחה\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.csproj.CoreCompileInputs.cache
+Y:\Groups\1\כהן מנוחה\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\ref\Repproject.Repositories.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.pdb
+D:\RepProject\Repproject.Repositories\bin\Debug\net5.0\Repproject.Repositories.deps.json
+D:\RepProject\Repproject.Repositories\bin\Debug\net5.0\Repproject.Repositories.dll
+D:\RepProject\Repproject.Repositories\bin\Debug\net5.0\ref\Repproject.Repositories.dll
+D:\RepProject\Repproject.Repositories\bin\Debug\net5.0\Repproject.Repositories.pdb
+D:\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.csproj.AssemblyReference.cache
+D:\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.AssemblyInfoInputs.cache
+D:\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.AssemblyInfo.cs
+D:\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.csproj.CoreCompileInputs.cache
+D:\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.dll
+D:\RepProject\Repproject.Repositories\obj\Debug\net5.0\ref\Repproject.Repositories.dll
+D:\RepProject\Repproject.Repositories\obj\Debug\net5.0\Repproject.Repositories.pdb

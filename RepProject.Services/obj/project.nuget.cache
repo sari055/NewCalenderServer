@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "yORdush4yifKqYsTjNpPe8UhMe6AIZEA59lomXIp+H57P8LDy+JEFpc/XTe/blvyp9SqPzgoWM1qJPjXaHd5Jg==",
+  "success": true,
+  "projectFilePath": "D:\\RepProject\\RepProject.Services\\RepProject.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user1\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

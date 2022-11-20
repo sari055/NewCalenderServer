@@ -1,0 +1,129 @@
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\appsettings.json
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.exe
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.deps.json
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.runtimeconfig.json
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.runtimeconfig.dev.json
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\ref\RepProject.WebAPI.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.pdb
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Common.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Repproject.Repositories.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Services.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Repproject.Repositories.pdb
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Services.pdb
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Common.pdb
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.csproj.AssemblyReference.cache
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.AssemblyInfoInputs.cache
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.AssemblyInfo.cs
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\staticwebassets\RepProject.WebAPI.StaticWebAssets.Manifest.cache
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\staticwebassets\RepProject.WebAPI.StaticWebAssets.xml
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\scopedcss\bundle\RepProject.WebAPI.styles.css
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.csproj.CopyComplete
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\ref\RepProject.WebAPI.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.pdb
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.genruntimeconfig.cache
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Mock.dll
+C:\Users\USER\3D Objects\שנה ב\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Mock.pdb
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\appsettings.Development.json
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\appsettings.json
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.exe
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.deps.json
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.runtimeconfig.json
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.runtimeconfig.dev.json
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\ref\RepProject.WebAPI.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.pdb
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\AutoMapper.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Common.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Mock.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Repproject.Repositories.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Services.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Mock.pdb
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Repproject.Repositories.pdb
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Services.pdb
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Common.pdb
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.csproj.AssemblyReference.cache
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.AssemblyInfoInputs.cache
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.AssemblyInfo.cs
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.csproj.CoreCompileInputs.cache
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\staticwebassets\RepProject.WebAPI.StaticWebAssets.Manifest.cache
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\staticwebassets\RepProject.WebAPI.StaticWebAssets.xml
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\scopedcss\bundle\RepProject.WebAPI.styles.css
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.RazorTargetAssemblyInfo.cache
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.csproj.CopyComplete
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\ref\RepProject.WebAPI.dll
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.pdb
+Y:\Groups\1\כהן מנוחה\.net\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.genruntimeconfig.cache
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\appsettings.Development.json
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\appsettings.json
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.exe
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.deps.json
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.runtimeconfig.json
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.runtimeconfig.dev.json
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\ref\RepProject.WebAPI.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.WebAPI.pdb
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\AutoMapper.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Common.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Mock.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Repproject.Repositories.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Services.dll
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Mock.pdb
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\Repproject.Repositories.pdb
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Services.pdb
+D:\RepProject\RepProject.WebAPI\bin\Debug\net5.0\RepProject.Common.pdb
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.csproj.AssemblyReference.cache
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.AssemblyInfoInputs.cache
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.AssemblyInfo.cs
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.csproj.CoreCompileInputs.cache
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\staticwebassets\RepProject.WebAPI.StaticWebAssets.Manifest.cache
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\staticwebassets\RepProject.WebAPI.StaticWebAssets.xml
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\scopedcss\bundle\RepProject.WebAPI.styles.css
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.RazorTargetAssemblyInfo.cache
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.csproj.CopyComplete
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.dll
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\ref\RepProject.WebAPI.dll
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.pdb
+D:\RepProject\RepProject.WebAPI\obj\Debug\net5.0\RepProject.WebAPI.genruntimeconfig.cache
