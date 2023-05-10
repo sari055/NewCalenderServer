@@ -3,16 +3,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore; 
 
 namespace Repproject.Repositories.Interfaces
 {
-    public interface IContext
-    {
-        List<Role> roles { get; set; }
+	public interface IContext
+	{
 
-        List<Permission> permissions { get; set; }
-
-        public List<Claim> claims { get; set; }
-    }
+		DbSet<Child> Children { get; set; }
+		DbSet<Parent> Parents { get; set; }
+		int SaveChanges();
+		Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken));
+	}
 }

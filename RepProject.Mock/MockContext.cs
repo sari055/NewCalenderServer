@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace RepProject.Mock
 {
-    public class MockContext : IContext
+    public class MockContext //: IContext
     {
         public List<Role> roles { get; set; }
 

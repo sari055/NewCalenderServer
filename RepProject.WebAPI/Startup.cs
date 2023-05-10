@@ -2,24 +2,29 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Repproject.Repositories.Interfaces;
 using Repproject.Repositories.Repositories;
-using RepProject.Mock;
+using RepProject.Context;
 using RepProject.Services;
+using RepProject.WebAPI.Middlewares;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace RepProject.WebAPI
 {
     public class Startup
     {
+        private string MyOrigin = "myOrigin";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -31,17 +36,25 @@ namespace RepProject.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSingleton<IContext, MockContext>();
-            services.AddScoped<IRoleRepository, RoleRepository>();
-            services.AddScoped<IPermissionRepository, PermissionRepository>();
-            services.AddScoped<IClaimRepository, ClaimRepository>();
+            // services.AddSingleton<IContext>();
+            services.AddServices();
+            //services.AddSingleton<IContext, MockContext>();
+            services.AddDbContext<IContext, DataContext>();
             services.AddAutoMapper(typeof(Mapping));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "RepProject.WebAPI", Version = "v1" });
             });
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy(name: MyOrigin,
+            //                      policy =>
+            //                      {
+            //                          policy.WithOrigins("*");
+            //                      });
+            //});
         }
-
+      
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -51,12 +64,26 @@ namespace RepProject.WebAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RepProject.WebAPI v1"));
             }
-
+           
+            app.UseCors(x => x
+             .AllowAnyOrigin()
+             .AllowAnyMethod()
+             .AllowAnyHeader());
+          
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseTrack();
+
+            app.UseShabbos();
+            //app.Use(function(req, res, next) {
+            //    res.header('Access-Control-Allow-Origin', req.headers.origin);
+            //    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+            //    next();
+            //});
 
             app.UseEndpoints(endpoints =>
             {

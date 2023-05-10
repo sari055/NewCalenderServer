@@ -9,9 +9,8 @@ namespace RepProject.Services
     {
         public Mapping()
         {
-            CreateMap<Role, RoleDTO>().ReverseMap();
-            CreateMap<Permission, PermissionDTO>().ReverseMap();
-            CreateMap<Claim, ClaimDTO>().ReverseMap();
+            CreateMap<Child, ChildDTO>().ReverseMap();
+            CreateMap<Parent, ParentDTO>().ReverseMap();
         }
     }
 }
