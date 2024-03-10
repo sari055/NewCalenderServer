@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj": {}
+    "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj": {}
   },
   "projects": {
-    "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj": {
+    "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj",
+        "projectUniqueName": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj",
         "projectName": "Repproject.Repositories",
-        "projectPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj",
+        "projectPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\obj\\",
+        "outputPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -46,7 +46,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "44fIbzRSovnCRIySv0r6nYHTGAWsZsBaOWJfnOmx6YDojVLcEHlvGrBUVwk7Pe3dd7EfHkQdLZ0fuLB9686B8A==",
+  "dgSpecHash": "Oie7wg+pJ2uloAgWtnTUIEnaKuJmKrEhvnI6vj8UxKQ1NnFVUoT6ADYd1+QNWmsqKy0pwJzUWVOh9HQnR++KAQ==",
   "success": true,
-  "projectFilePath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Common\\RepProject.Common.csproj",
+  "projectFilePath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Common\\RepProject.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

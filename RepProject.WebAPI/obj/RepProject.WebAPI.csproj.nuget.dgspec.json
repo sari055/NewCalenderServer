@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.WebAPI\\RepProject.WebAPI.csproj": {}
+    "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.WebAPI\\RepProject.WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Common\\RepProject.Common.csproj": {
+    "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Common\\RepProject.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Common\\RepProject.Common.csproj",
+        "projectUniqueName": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Common\\RepProject.Common.csproj",
         "projectName": "RepProject.Common",
-        "projectPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Common\\RepProject.Common.csproj",
+        "projectPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Common\\RepProject.Common.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Common\\obj\\",
+        "outputPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -75,14 +75,14 @@
         }
       }
     },
-    "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Context\\RepProject.Context.csproj": {
+    "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Context\\RepProject.Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Context\\RepProject.Context.csproj",
+        "projectUniqueName": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Context\\RepProject.Context.csproj",
         "projectName": "RepProject.Context",
-        "projectPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Context\\RepProject.Context.csproj",
+        "projectPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Context\\RepProject.Context.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Context\\obj\\",
+        "outputPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Context\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -103,8 +103,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj": {
-                "projectPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj"
+              "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj": {
+                "projectPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj"
               }
             }
           }
@@ -154,14 +154,14 @@
         }
       }
     },
-    "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj": {
+    "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj",
+        "projectUniqueName": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj",
         "projectName": "Repproject.Repositories",
-        "projectPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj",
+        "projectPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\obj\\",
+        "outputPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -196,7 +196,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -229,14 +229,14 @@
         }
       }
     },
-    "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Services\\RepProject.Services.csproj": {
+    "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Services\\RepProject.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Services\\RepProject.Services.csproj",
+        "projectUniqueName": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Services\\RepProject.Services.csproj",
         "projectName": "RepProject.Services",
-        "projectPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Services\\RepProject.Services.csproj",
+        "projectPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Services\\RepProject.Services.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Services\\obj\\",
+        "outputPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -257,11 +257,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Common\\RepProject.Common.csproj": {
-                "projectPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Common\\RepProject.Common.csproj"
+              "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Common\\RepProject.Common.csproj": {
+                "projectPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Common\\RepProject.Common.csproj"
               },
-              "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj": {
-                "projectPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj"
+              "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj": {
+                "projectPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj"
               }
             }
           }
@@ -311,14 +311,14 @@
         }
       }
     },
-    "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.WebAPI\\RepProject.WebAPI.csproj": {
+    "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.WebAPI\\RepProject.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.WebAPI\\RepProject.WebAPI.csproj",
+        "projectUniqueName": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.WebAPI\\RepProject.WebAPI.csproj",
         "projectName": "RepProject.WebAPI",
-        "projectPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.WebAPI\\RepProject.WebAPI.csproj",
+        "projectPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.WebAPI\\RepProject.WebAPI.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.WebAPI\\obj\\",
+        "outputPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -339,14 +339,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Context\\RepProject.Context.csproj": {
-                "projectPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Context\\RepProject.Context.csproj"
+              "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Context\\RepProject.Context.csproj": {
+                "projectPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Context\\RepProject.Context.csproj"
               },
-              "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj": {
-                "projectPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj"
+              "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj": {
+                "projectPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\Repproject.Repositories\\Repproject.Repositories.csproj"
               },
-              "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Services\\RepProject.Services.csproj": {
-                "projectPath": "D:\\תכנות\\פרקטיקום\\‏‏RepProject - עותק\\RepProject.Services\\RepProject.Services.csproj"
+              "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Services\\RepProject.Services.csproj": {
+                "projectPath": "D:\\תכנות\\פרויקט למיץ\\‏‏RepProject - עותק\\RepProject.Services\\RepProject.Services.csproj"
               }
             }
           }

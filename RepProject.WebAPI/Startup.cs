@@ -18,7 +18,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using RepProject.Services.Services;
+using RepProject.Services.Interfaces;
 using static System.Net.Mime.MediaTypeNames;
+using RepProject.WebAPI.Controllers;
+using RepProject.WebAPI.Models;
+using Repproject.Repositories.Entities;
 
 namespace RepProject.WebAPI
 {
@@ -40,7 +45,25 @@ namespace RepProject.WebAPI
             services.AddServices();
             //services.AddSingleton<IContext, MockContext>();
             services.AddDbContext<IContext, DataContext>();
+
+            services.AddScoped<IYearEventService, YearEventService>();
+            services.AddScoped<IEventService, EventService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserTypeService, UserTypeService>();
+            services.AddScoped<ILevelService, LevelService>();
+            services.AddScoped<IEventService, EventService>();
+            services.AddScoped<ICalenderService, CalenderService>();
+            services.AddScoped<ICalenderYearService, CalenderYearService>();
+            services.AddScoped<ICalenderUserService, CalenderUserService>();
+
             services.AddAutoMapper(typeof(Mapping));
+           services.AddAutoMapper(typeof(YearEventModel), typeof(YearEventModel));
+           services.AddAutoMapper(typeof(UserTypeModel), typeof(UserTypeModel));
+           services.AddAutoMapper(typeof(LevelModel), typeof(LevelModel));
+           services.AddAutoMapper(typeof(EventModel), typeof(EventModel));
+           services.AddAutoMapper(typeof(CalenderYearModel), typeof(CalenderYearModel));
+           services.AddAutoMapper(typeof(CalenderUserModel), typeof(CalenderUserModel));
+           services.AddAutoMapper(typeof(CalenderModel), typeof(CalenderModel));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "RepProject.WebAPI", Version = "v1" });
@@ -78,7 +101,7 @@ namespace RepProject.WebAPI
 
             app.UseTrack();
 
-            app.UseShabbos();
+           // app.UseShabbos();
             //app.Use(function(req, res, next) {
             //    res.header('Access-Control-Allow-Origin', req.headers.origin);
             //    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");

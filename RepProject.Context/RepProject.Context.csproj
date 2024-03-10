@@ -17,4 +17,8 @@
     <ProjectReference Include="..\Repproject.Repositories\Repproject.Repositories.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

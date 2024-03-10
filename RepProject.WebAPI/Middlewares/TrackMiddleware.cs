@@ -18,8 +18,6 @@ namespace RepProject.WebAPI.Middlewares
 
         public async Task InvokeAsync(HttpContext context)
         {
-            //context.Response.StatusCode = StatusCodes.Status400BadRequest;
-
             var guid = Guid.NewGuid().ToString();//יצירת מפתח לבקשה
             context.Items.Add("ReqSeq", guid);//שמירת המפתח בקונטקסט של הבקשה
             Console.WriteLine($"Request {guid} started the pipeline");//רישום ללוג

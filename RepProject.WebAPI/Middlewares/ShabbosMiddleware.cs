@@ -10,30 +10,30 @@ namespace RepProject.WebAPI.Middlewares
 {
     public class ShabbosMiddleware
     {
-        private readonly RequestDelegate _next;
+    //    private readonly RequestDelegate _next;
 
-        public ShabbosMiddleware(RequestDelegate next)
-        {
-            _next = next;
-        }
+    //    public ShabbosMiddleware(RequestDelegate next)
+    //    {
+    //        _next = next;
+    //    }
 
-        public async Task InvokeAsync(HttpContext context)
-        {
+    //    public async Task InvokeAsync(HttpContext context)
+    //    {
 
-            if (DateTime.Now.DayOfWeek != DayOfWeek.Saturday)
-                await _next(context);//גלגול הבקשה לפונקציה הבאה
-            else context.Response.StatusCode = StatusCodes.Status400BadRequest;
+    //        if (DateTime.Now.DayOfWeek != DayOfWeek.Saturday)
+    //            await _next(context);//גלגול הבקשה לפונקציה הבאה
+    //        else context.Response.StatusCode = StatusCodes.Status400BadRequest;
 
-        }
-    }
+    //    }
+    //}
 
-    public static class ShabbosMiddlewareExtension
-    {
-        public static IApplicationBuilder UseShabbos(this IApplicationBuilder builder)
-        {
-            builder.UseMiddleware<ShabbosMiddleware>();
+    //public static class ShabbosMiddlewareExtension
+    //{
+    //    public static IApplicationBuilder UseShabbos(this IApplicationBuilder builder)
+    //    {
+    //        builder.UseMiddleware<ShabbosMiddleware>();
 
-            return builder;
-        }
+    //        return builder;
+    //    }
     }
 }
