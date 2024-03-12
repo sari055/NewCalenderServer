@@ -17,9 +17,9 @@ namespace Repproject.Repositories.Repositories
             services.AddScoped<IEventRepository, EventRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ILevelRepository, LevelRepository>();
-            services.AddScoped<CalenderRepository, CalenderRepository>();
-            services.AddScoped<CalenderUserRepository, CalenderUserRepository>();
-            services.AddScoped<CalenderYearRepository, CalenderYearRepository>();
+            services.AddScoped<ICalenderRepository, CalenderRepository>();
+            services.AddScoped<ICalenderUserRepository, CalenderUserRepository>();
+            services.AddScoped<ICalenderYearRepository, CalenderYearRepository>();
             
             return services;
         }
