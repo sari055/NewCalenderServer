@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Repository.Entities
+{
+    public class Event
+    {
+        [Required]
+        public int Id { get; set; }
+        [Required]
+        public int CalenderId { get; set; }
+        public string EventType { get; set; }
+        public string HebrewDate { get; set; }
+        [Required]
+        public int UserId { get; set; }
+        public string EventYear { get; set; }
+        [Required]
+        public bool OneTimeEvent { get; set; }
+    }
+}
