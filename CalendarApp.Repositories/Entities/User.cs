@@ -11,17 +11,25 @@ namespace Repository.Entities
     {
         [Required]
         public int Id { get; set; }
+        public int? SiteUserId { get; set; }
         [Required]
-        public int UserTZ { get; set; }
+        public int TZ { get; set; }
         [Required]
-        public int UserSpouseID { get; set; }
+        public string FirstName { get; set; }
         [Required]
-        public int UserFatherID { get; set; }
-        [Required]
-        public int UserMotherID { get; set; }
-        public string UserName { get; set; }
-        public string UserPhoneNumber { get; set; }
-        public string UserEmail { get; set; }
-        public string UserPassword { get; set; }
+        public string LastName { get; set; }
+        public DateTime BornDate { get; set; }
+        public int? SpouseId { get; set; }
+        public int? FatherId { get; set; }
+        public int? MotherId { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Email { get; set; }
+
+
+        public SiteUser SiteUser { get; set; }
+        public User Spouse { get; set; }
+        public User Father { get; set; }
+        public User Mother { get; set; }
+        public CalenderUser CalenderUser { get; set; }
     }
 }

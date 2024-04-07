@@ -3,6 +3,7 @@ using CalendarApp.Repositories.Entities;
 using CalendarApp.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using CalendarApp.Common.DTOs;
 
 
 namespace CalendarApp.WebAPI.Controllers

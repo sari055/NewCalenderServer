@@ -10,7 +10,7 @@ namespace CalendarApp.Services.Interfaces
 {
     public interface ICalenderUserService
     {
-        Task<IEnumerable<CalenderUserDTO>> GetListAsync();
+        Task<IEnumerable<CalenderUserDTO>> GetListAsync(int userId);
 
         Task<CalenderUserDTO> GetByIdAsync(int id);
 

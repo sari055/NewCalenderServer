@@ -19,15 +19,17 @@ namespace CalendarApp.Repositories.Repositories
             _context = context;
         }
        
-        public async Task<CalenderUser> AddAsync(int userId, string userType, int levelId, int familyId)
+        public async Task<CalenderUser> AddAsync(int userId, int calenderId ,UserType userType)
         {
+
             var newCalenderUser = new CalenderUser
             { 
-                UserId = userId,    
-                UserType = userType,
-                LevelId = levelId,
-                FamilyId = familyId
-                } ;
+                UserId = userId, 
+                CalenderId = calenderId,
+                UserType = userType
+                //LevelId = levelId,
+                //FamilyId = familyId
+            } ;
             await _context.CalenderUsers.AddAsync(newCalenderUser);
             await _context.SaveChangesAsync();
             return newCalenderUser;

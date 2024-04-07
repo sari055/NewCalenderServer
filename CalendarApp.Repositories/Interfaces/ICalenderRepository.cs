@@ -17,8 +17,8 @@ namespace CalendarApp.Repositories.Interfaces
         Task<Calender> AddAsync( int directorId,string groupName);
 
         Task<Calender> UpdateAsync(Calender calender);
-        
 
+        Task<List<Calender>> GetCalendarsBySiteUserId(int siteUserId);
         Task DeleteAsync(int id);
     }
 }

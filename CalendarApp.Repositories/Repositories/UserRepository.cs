@@ -18,21 +18,23 @@ namespace CalendarApp.Repositories.Repositories
         {
             _context = context;
         }
-       
-        public async Task<User> AddAsync(int userTZ, int userSpouseID, int userFatherID, int userMotherID, string userName, string userPhoneNumber, string userEmail, string userPassword)
+
+        public async Task<User> AddAsync(int tz, string firstName, string lastName, string phoneNumber, string email, int? spouseId, int? fatherId, int? motherId, DateTime bornDate, int? siteUserId)
         {
             var newUser = new User
             { 
-                UserTZ=userTZ,
-                UserSpouseID=userSpouseID,
-                UserFatherID=userFatherID,
-                UserMotherID=userMotherID,
-                UserName=userName,
-                UserPhoneNumber=userPhoneNumber,     
-                UserEmail=userEmail,
-                UserPassword=userPassword
+                TZ=tz,
+                FirstName=firstName,
+                LastName=lastName,
+                PhoneNumber=phoneNumber,
+                Email=email,
+                SpouseId=spouseId,
+                FatherId=fatherId,
+                MotherId=motherId,
+                BornDate=bornDate,
+                SiteUserId=siteUserId
+            };
 
-               } ;
             await _context.Users.AddAsync(newUser);
             await _context.SaveChangesAsync();
             return newUser;
@@ -46,33 +48,6 @@ namespace CalendarApp.Repositories.Repositories
             
         }
 
-        public async Task<User> FindByEmailAsync(string userEmail)
-        {
-            return await _context.Users.FirstOrDefaultAsync(user => user.UserEmail == userEmail);
-        }
-
-        public async Task<List<User>> GetAllAsync()
-        {
-            return await _context.Users.ToListAsync();
-        }
-
-        public async Task<User> GetByEmailAndPassword(string email, string password)
-        {
-            return await _context.Users.FirstOrDefaultAsync(user => user.UserEmail == email && user.UserPassword == password);
-        }
-
-        public async Task<User> GetByIdAsync(int id)
-        {
-            return await _context.Users.FindAsync(id);
-        }
-
-      
-        //public async Task<int> GetByTzAsync(string tz)
-        //{
-        //    var parentsList = await GetAllAsync();
-        //    return parentsList.Find(u => u.Tz == tz).Id;
-       
-        //}
         public async Task<User> UpdateAsync(User user)
         {
             var updatedUser = _context.Users.Update(user);
@@ -80,6 +55,24 @@ namespace CalendarApp.Repositories.Repositories
             return updatedUser.Entity;
         }
 
-        
+        public async Task<List<User>> GetAllAsync()
+        {
+            return await _context.Users.ToListAsync();
+        }
+
+        public async Task<User> GetByIdAsync(int id)
+        {
+            return await _context.Users.FindAsync(id);
+        }
+
+        public async Task<List<User>> getBySiteUserAsync(int siteUserId)
+        {
+            return await _context.Users.Where(d => d.SiteUserId == siteUserId).ToListAsync();
+        }
+
+        public Task<User> AddAsync(int tz, string firstName, string lastName, string phoneNumbar, string email, int spouseId, int fatherId, int motherId, DateTime bornDate, int siteUserId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

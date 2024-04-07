@@ -1,20 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace CalendarApp.Repositories.Entities
 {
     public class UserDTO
     {
-        public int UserTZ { get; set; }
-        public int UserSpouseID { get; set; }
-        public int UserFatherID { get; set; }
-        public int UserMotherID { get; set; }
-        public string UserName { get; set; }
-        public string UserPhoneNumber { get; set; }
-        public string UserEmail { get; set; }
-        public string UserPassword { get; set; }
+        public int Id { get; set; }
+        public int? SiteUserId { get; set; }
+        public int TZ { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime BornDate { get; set; }
+        public int? SpouseId { get; set; }
+        public int? FatherId { get; set; }
+        public int? MotherId { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Email { get; set; }
+
+
+        public SiteUserDTO SiteUser { get; set; }
+        public UserDTO Spouse { get; set; }
+        public UserDTO Father { get; set; }
+        public UserDTO Mother { get; set; }
+        public CalenderUserDTO CalenderUser { get; set; }
+
+
+        public UserDTO()  { }
+
+        public UserDTO(int tz, string firstName, string lastName, DateTime bornDate, string phoneNumbar, string email)
+        {
+            TZ = tz;
+            FirstName = firstName;
+            LastName = lastName;
+            BornDate = bornDate;
+            PhoneNumber = phoneNumbar;
+            Email = email;
+        }
     }
 }

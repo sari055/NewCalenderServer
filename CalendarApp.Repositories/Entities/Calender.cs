@@ -14,5 +14,12 @@ namespace Repository.Entities
         [Required]
         public int DirectorId { get; set; }
         public string GroupName { get; set; }
+
+
+        public User Director { get; set; }
+        public List<CalenderUser> CalenderUsers { get; set; }
+        public List<CalenderYear> CalenderYears { get; set; }
+        public List<Event> Events { get; set; }
+
     }
 }

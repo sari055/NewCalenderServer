@@ -17,6 +17,9 @@ namespace Repository.Entities
         [Required]
         public int Year { get; set; }
 
+
+        public Calender Calender { get; set; }
+
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,8 +10,13 @@ namespace CalendarApp.Common.DTOs
 {
     public class YearEventDTO
     {
+
+        public int Id { get; set; }
         public int EventId { get; set; }
         public int CalenderId { get; set; }
         public DateTime GregorianDate { get; set; }
+
+        public EventDTO Event { get; set; }
+        public CalenderDTO Calender { get; set; }
     }
 }

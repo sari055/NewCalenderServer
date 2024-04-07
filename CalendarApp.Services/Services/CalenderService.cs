@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Repository.Entities;
-using CalendarApp.Repositories.Entities;
 using CalendarApp.Repositories.Interfaces;
 using CalendarApp.Repositories.Repositories;
 using CalendarApp.Common.DTOs;
@@ -13,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using static Azure.Core.HttpHeader;
+using Microsoft.EntityFrameworkCore;
 
 namespace CalendarApp.Services.Services
 {
@@ -20,11 +20,13 @@ namespace CalendarApp.Services.Services
     {
         private readonly ICalenderRepository _calender;
         private readonly IMapper _mapper;
+        private readonly ICalenderUserService _calenderUserService;
 
-        public CalenderService(ICalenderRepository calender, IMapper mapper)
+        public CalenderService(ICalenderRepository calender, ICalenderUserService calenderUser, IMapper mapper)
         {
             _calender = calender;
             _mapper = mapper;
+            _calenderUserService = calenderUser;
         }
 
         public async Task<CalenderDTO> GetByIdAsync(int id)
@@ -43,8 +45,8 @@ namespace CalendarApp.Services.Services
 
         public async Task<CalenderDTO> AddAsync(CalenderDTO calender)
         {
-            
-            return _mapper.Map<CalenderDTO>(await _calender.AddAsync(calender.DirectorId,calender.GroupName));
+            Calender newCalender = await _calender.AddAsync(calender.DirectorId, calender.GroupName);
+            return _mapper.Map<CalenderDTO>(newCalender);
         }
 
         public async Task<CalenderDTO> UpdateAsync(CalenderDTO calender)
@@ -55,6 +57,11 @@ namespace CalendarApp.Services.Services
         public async Task DeleteAsync(int id)
         {
             await _calender.DeleteAsync(id);
+        }
+
+        public async Task<IEnumerable<CalenderDTO>> GetCalendarsBySiteUserId(int siteUserId)
+        {
+            return _mapper.Map<IEnumerable<CalenderDTO>> (await _calender.GetCalendarsBySiteUserId(siteUserId));
         }
     }
 }

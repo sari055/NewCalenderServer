@@ -28,16 +28,23 @@ namespace CalendarApp.WebAPI.Controllers
         }
 
         // GET: api/<RolesController>
-        [HttpGet]
-        public async Task<IEnumerable<CalenderDTO>> Get()
-        {
-            return await _calender.GetListAsync();
-        }
+        //[HttpGet]
+        //public async Task<IEnumerable<CalenderDTO>> Get()
+        //{
+        //    return await _calender.GetListAsync();
+        //}
         [HttpGet("{id}")]
         public async Task<CalenderDTO> GetById(int id)
         {
             return await _calender.GetByIdAsync(id);
         }
+
+        [HttpGet]
+        public async Task<IEnumerable<CalenderDTO>> GetCalendarsBySiteUserId(int siteUserId)
+        {
+            return await _calender.GetCalendarsBySiteUserId(siteUserId);
+        }
+
         [HttpDelete]
         public async Task Delete(int id)
         {

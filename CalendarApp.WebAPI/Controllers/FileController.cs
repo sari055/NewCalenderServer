@@ -3,6 +3,9 @@ using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using CalendarApp.Services.Models;
 using Microsoft.AspNetCore.Http;
+using Repository.Entities;
+using CalendarApp.WebAPI.Helpers;
+using CalendarApp.Repositories.Entities;
 
 namespace CalendarApp.WebAPI.Controllers
 {
@@ -11,11 +14,17 @@ namespace CalendarApp.WebAPI.Controllers
     public class FileController : ControllerBase
     {
         [HttpPost]
+        [Authorize]
         public ActionResult Post([FromForm] FileModel file)
         {
             try
             {
-                string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", file.FileName);
+                var user = (SiteUserDTO)HttpContext.Items["User"];
+                string fileExtension = Path.GetExtension(file.FormFile.FileName);
+                //TODO change file name to use tz from user
+                string fileName = $"{user.Id}{fileExtension}";
+
+                string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
 
                 using (Stream stream = new FileStream(path, FileMode.Create)) 
                 {
@@ -33,6 +42,7 @@ namespace CalendarApp.WebAPI.Controllers
         [HttpGet]
         public IActionResult Get(int userTz)
         {
+            //TODO: change the userTz to other property
             try
             {
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", $"{userTz}.jpg");

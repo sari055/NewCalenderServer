@@ -12,12 +12,13 @@ namespace CalendarApp.Services
         {
             CreateMap<YearEvent, YearEventDTO>().ReverseMap();   
             CreateMap<UserType, UserTypeDTO>().ReverseMap();
-            CreateMap<User, UserDTO>().ReverseMap();
+            CreateMap<SiteUser, SiteUserDTO>().ReverseMap();
             CreateMap<Level, LevelDTO>().ReverseMap();
             CreateMap<Event, EventDTO>().ReverseMap();
             CreateMap<Calender, CalenderDTO>().ReverseMap();
             CreateMap<CalenderUser, CalenderUserDTO>().ReverseMap();
             CreateMap<CalenderYear, CalenderYearDTO>().ReverseMap();
+            CreateMap<User, UserDTO>().ReverseMap();
         }
     }
 }

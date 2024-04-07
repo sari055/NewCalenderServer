@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Repository.Entities;
-using CalendarApp.Repositories.Entities;
 using CalendarApp.Repositories.Interfaces;
 using CalendarApp.Repositories.Repositories;
 using CalendarApp.Common.DTOs;

@@ -7,16 +7,32 @@ using System.Threading.Tasks;
 
 namespace Repository.Entities
 {
+    public enum UserType
+    {
+        Admin,
+        Editor,
+        Viewer
+    }
+
     public class CalenderUser
     {
         [Required]
         public int Id { get; set; }
         [Required]
         public int UserId { get; set; }
-        public string UserType { get; set; }
         [Required]
-        public int LevelId { get; set; }
+        public int CalenderId { get; set; }
         [Required]
-        public int FamilyId { get; set; }
+        public UserType UserType { get; set; }
+
+
+        public User User { get; set; }
+        public Calender Calender { get; set; }
+
+
+        //[Required]
+        //public int LevelId { get; set; }
+        //[Required]
+        //public int FamilyId { get; set; }
     }
 }

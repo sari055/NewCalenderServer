@@ -1,5 +1,4 @@
-﻿using CalendarApp.Repositories.Entities;
-using CalendarApp.Common.DTOs;
+﻿using CalendarApp.Common.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,5 +18,7 @@ namespace CalendarApp.Services.Interfaces
         Task<CalenderDTO> UpdateAsync(CalenderDTO calender);
 
         Task DeleteAsync(int id);
+
+        Task<IEnumerable<CalenderDTO>> GetCalendarsBySiteUserId(int siteUserId);
     }
 }

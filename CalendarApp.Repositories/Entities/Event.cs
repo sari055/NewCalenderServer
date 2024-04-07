@@ -20,5 +20,9 @@ namespace Repository.Entities
         public string EventYear { get; set; }
         [Required]
         public bool OneTimeEvent { get; set; }
+
+
+        public Calender Calender { get; set; }
+        public User User { get; set; }
     }
 }

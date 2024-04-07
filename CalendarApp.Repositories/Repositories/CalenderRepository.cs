@@ -49,13 +49,6 @@ namespace CalendarApp.Repositories.Repositories
             return await _context.Calenders.FindAsync(id);
         }
 
-      
-        //public async Task<int> GetByTzAsync(string tz)
-        //{
-        //    var parentsList = await GetAllAsync();
-        //    return parentsList.Find(u => u.Tz == tz).Id;
-       
-        //}
         public async Task<Calender> UpdateAsync(Calender calender)
         {
             var updatedCalender = _context.Calenders.Update(calender);
@@ -63,6 +56,13 @@ namespace CalendarApp.Repositories.Repositories
             return updatedCalender.Entity;
         }
 
-        
+        public async Task<List<Calender>> GetCalendarsBySiteUserId(int siteUserId)
+        {
+            return await _context.CalenderUsers
+                .Where(calendarUser => calendarUser.User.SiteUserId == siteUserId)
+                .Select(calendarUser => calendarUser.Calender)
+                .ToListAsync();
+        }
+
     }
 }

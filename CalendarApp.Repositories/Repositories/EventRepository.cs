@@ -27,7 +27,7 @@ namespace CalendarApp.Repositories.Repositories
                 EventType = eventType,
                 HebrewDate = hebrewDate,
                 UserId = userId,
-                } ;
+            };
             await _context.Events.AddAsync(newEvent);
             await _context.SaveChangesAsync();
             return newEvent;

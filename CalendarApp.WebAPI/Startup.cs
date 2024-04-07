@@ -11,7 +11,6 @@ using CalendarApp.Context;
 using CalendarApp.Services;
 using CalendarApp.WebAPI.Middlewares;
 using System.Text;
-using CalendarApp.WebAPI.Helpers;
 
 
 namespace CalendarApp.WebAPI
@@ -82,6 +81,15 @@ namespace CalendarApp.WebAPI
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CalendarApp.WebAPI v1"));
+            }
+
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                var context = services.GetRequiredService<DataContext>();
+                context.Database.EnsureCreated();
+                DbInitializer.Initialize(context);
             }
 
             app.UseCors(x => x

@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using CalendarApp.WebAPI.Helpers;
 
 
 namespace CalendarApp.WebAPI.Controllers
@@ -30,9 +31,12 @@ namespace CalendarApp.WebAPI.Controllers
 
         // GET: api/<RolesController>
         [HttpGet]
+        [Authorize]
         public async Task<IEnumerable<CalenderUserDTO>> Get()
         {
-            return await _calenderUser.GetListAsync();
+            //var user = (SiteUserDTO)HttpContext.Items["User"];
+            //return await _calenderUser.GetListAsync(user.Id);
+            throw new NotImplementedException();
         }
         [HttpGet("{id}")]
         public async Task<CalenderUserDTO> GetById(int id)
@@ -52,10 +56,10 @@ namespace CalendarApp.WebAPI.Controllers
 
             await _calenderUser.AddAsync(new CalenderUserDTO
             {  
-                FamilyId = calenderUser.FamilyId,
-                LevelId = calenderUser.LevelId,
-                UserId = calenderUser.UserId,
-                UserType = calenderUser.UserType,
+                //FamilyId = calenderUser.FamilyId,
+                //LevelId = calenderUser.LevelId,
+                //UserId = calenderUser.UserId,
+                //UserType = calenderUser.UserType,
             });
         }
         [HttpPut]

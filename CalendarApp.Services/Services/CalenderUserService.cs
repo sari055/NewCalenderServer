@@ -19,32 +19,32 @@ namespace CalendarApp.Services.Services
     public class CalenderUserService : ICalenderUserService
     {
         private readonly ICalenderUserRepository _calenderUser;
+        private readonly IUserService _user;
         private readonly IMapper _mapper;
 
-        public CalenderUserService(ICalenderUserRepository calenderUser, IMapper mapper)
+        public CalenderUserService(ICalenderUserRepository calenderUser, IUserService user, IMapper mapper)
         {
             _calenderUser = calenderUser;
             _mapper = mapper;
+            _user = user;
         }
 
         public async Task<CalenderUserDTO> GetByIdAsync(int id)
         {
             return _mapper.Map<CalenderUserDTO>(await _calenderUser.GetByIdAsync(id));
         }
-       
-        public async Task<CalenderUserDTO> GetOrderIdAsync(int id)
+
+        public async Task<IEnumerable<CalenderUserDTO>> GetListAsync(int userId)
         {
-            return _mapper.Map<CalenderUserDTO>(await _calenderUser.GetByIdAsync(id));
-        }
-        public async Task<IEnumerable<CalenderUserDTO>> GetListAsync()
-        {
+            List<UserDTO> users = (List<UserDTO>)await _user.getBySiteUserAsync(userId);
+            //TODO: get calenders by userid
             return _mapper.Map<IEnumerable<CalenderUserDTO>>(await _calenderUser.GetAllAsync());
         }
 
         public async Task<CalenderUserDTO> AddAsync(CalenderUserDTO calenderUser)
         {
             
-            return _mapper.Map<CalenderUserDTO>(await _calenderUser.AddAsync(calenderUser.UserId,calenderUser.UserType,calenderUser.LevelId,calenderUser.FamilyId));
+            return _mapper.Map<CalenderUserDTO>(await _calenderUser.AddAsync(calenderUser.UserId, calenderUser.CalenderId, _mapper.Map<UserType>(calenderUser.UserType)));
         }
 
         public async Task<CalenderUserDTO> UpdateAsync(CalenderUserDTO calenderUser)

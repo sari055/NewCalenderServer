@@ -1,5 +1,4 @@
-﻿using CalendarApp.Repositories.Entities;
-using CalendarApp.Common.DTOs;
+﻿using CalendarApp.Common.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;

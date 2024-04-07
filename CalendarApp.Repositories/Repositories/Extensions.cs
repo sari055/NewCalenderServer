@@ -13,13 +13,13 @@ namespace CalendarApp.Repositories.Repositories
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             services.AddScoped<IYearEventRepository, YearEventRepository>();
-            services.AddScoped<IUserTypeRepository, UserTypeRepository>();
             services.AddScoped<IEventRepository, EventRepository>();
-            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ISiteUserRepository, SiteUserRepository>();
             services.AddScoped<ILevelRepository, LevelRepository>();
             services.AddScoped<ICalenderRepository, CalenderRepository>();
             services.AddScoped<ICalenderUserRepository, CalenderUserRepository>();
             services.AddScoped<ICalenderYearRepository, CalenderYearRepository>();
+            services.AddScoped<IUserRepository,UserRepository>();
             
             return services;
         }

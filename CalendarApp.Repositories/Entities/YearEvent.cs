@@ -17,5 +17,8 @@ namespace Repository.Entities
         public int CalenderId { get; set; }
         [Required]
         public DateTime GregorianDate { get; set; }
+
+        public Event Event { get; set; }
+        public Calender Calender { get; set; }
     }
 }

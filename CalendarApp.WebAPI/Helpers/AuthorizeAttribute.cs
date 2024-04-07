@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Repository.Entities;
 using System;
+using CalendarApp.Repositories.Entities;
 
 namespace CalendarApp.WebAPI.Helpers
 {
@@ -11,7 +12,7 @@ namespace CalendarApp.WebAPI.Helpers
     {
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            var user = (User)context.HttpContext.Items["User"];
+            var user = (SiteUserDTO)context.HttpContext.Items["User"];
             if (user == null)
             {
                 // not logged in

@@ -14,7 +14,7 @@ namespace CalendarApp.Repositories.Interfaces
 
         Task<Event> GetByIdAsync(int id);
     
-        Task<Event> AddAsync(   int calenderId,string eventType,string hebrewDate, int userId,string eventYear ,bool oneTimeEvent);
+        Task<Event> AddAsync(int calenderId,string eventType,string hebrewDate, int userId,string eventYear ,bool oneTimeEvent);
 
         Task<Event> UpdateAsync(Event eevent);
         

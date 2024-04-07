@@ -14,9 +14,9 @@ namespace CalendarApp.Repositories.Interfaces
 	{
 
 		DbSet<YearEvent> YearEvents { get; set; }
-		DbSet<UserType> UserTypes { get; set; }
+		DbSet<SiteUser> SiteUsers { get; set; }
 		DbSet<User> Users { get; set; }
-		DbSet<Level> Levels { get; set; }	
+        DbSet<Level> Levels { get; set; }	
 		DbSet<Event> Events { get; set; }
 		DbSet<Calender> Calenders { get; set; }
 		DbSet<CalenderUser> CalenderUsers { get; set; }

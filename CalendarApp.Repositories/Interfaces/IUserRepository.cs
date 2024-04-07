@@ -14,15 +14,13 @@ namespace CalendarApp.Repositories.Interfaces
 
         Task<User> GetByIdAsync(int id);
 
-        Task<User> GetByEmailAndPassword(string email, string password);
-
-        Task<User> AddAsync(   int userTZ , int userSpouseID ,  int userFatherID,int userMotherID , string userName ,string userPhoneNumber, string userEmail,string userPassword);
+        Task<User> AddAsync(int tz, string firstName, string lastName, string phoneNumbar, string email, int spouseId, int fatherId, int motherId, DateTime bornDate, int siteUserId);
 
         Task<User> UpdateAsync(User user);
         
-
         Task DeleteAsync(int id);
-        Task<User> FindByEmailAsync(string userEmail);
+        Task<List<User>> getBySiteUserAsync(int siteUserId);
+        Task<User> AddAsync(int tz, string firstName, string lastName, string phoneNumber, string email, int? spouseId, int? fatherId, int? motherId, DateTime bornDate, int? siteUserId);
     }
 }
 
