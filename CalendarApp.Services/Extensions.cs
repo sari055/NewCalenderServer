@@ -23,9 +23,9 @@ namespace CalendarApp.Services
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ILevelService, LevelService>();
             services.AddScoped<IEventService,EventService>();
-            services.AddScoped<ICalenderService, CalenderService>();
-            services.AddScoped<ICalenderYearService, CalenderYearService>();
-            services.AddScoped<ICalenderUserService, CalenderUserService>();
+            services.AddScoped<ICalendarService, CalendarService>();
+            services.AddScoped<ICalendarYearService, CalendarYearService>();
+            services.AddScoped<ICalendarUserService, CalendarUserService>();
             services.AddScoped<ITokenService, TokenService>();
             return services;
         }

@@ -19,53 +19,53 @@ namespace CalendarApp.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CalenderUserController : ControllerBase
+    public class CalendarUserController : ControllerBase
     {
-        readonly ICalenderUserService _calenderUser;
+        readonly ICalendarUserService _calendarUser;
       
 
-        public CalenderUserController(ICalenderUserService calenderUser)
+        public CalendarUserController(ICalendarUserService calendarUser)
         {
-            _calenderUser = calenderUser;
+            _calendarUser = calendarUser;
         }
 
         // GET: api/<RolesController>
         [HttpGet]
         [Authorize]
-        public async Task<IEnumerable<CalenderUserDTO>> Get()
+        public async Task<IEnumerable<CalendarUserDTO>> Get()
         {
             //var user = (SiteUserDTO)HttpContext.Items["User"];
-            //return await _calenderUser.GetListAsync(user.Id);
+            //return await _calendarUser.GetListAsync(user.Id);
             throw new NotImplementedException();
         }
         [HttpGet("{id}")]
-        public async Task<CalenderUserDTO> GetById(int id)
+        public async Task<CalendarUserDTO> GetById(int id)
         {
-            return await _calenderUser.GetByIdAsync(id);
+            return await _calendarUser.GetByIdAsync(id);
         }
         [HttpDelete]
         public async Task Delete(int id)
         {
-            await _calenderUser.DeleteAsync(id);
+            await _calendarUser.DeleteAsync(id);
         }
         
         [HttpPost]
-        public async Task Post([FromBody] CalenderUserModel calenderUser)
+        public async Task Post([FromBody] CalendarUserModel calendarUser)
         {
           //  Debug.WriteLine(order.IdParent);
 
-            await _calenderUser.AddAsync(new CalenderUserDTO
+            await _calendarUser.AddAsync(new CalendarUserDTO
             {  
-                //FamilyId = calenderUser.FamilyId,
-                //LevelId = calenderUser.LevelId,
-                //UserId = calenderUser.UserId,
-                //UserType = calenderUser.UserType,
+                //FamilyId = calendarUser.FamilyId,
+                //LevelId = calendarUser.LevelId,
+                //UserId = calendarUser.UserId,
+                //UserType = calendarUser.UserType,
             });
         }
         [HttpPut]
-        public async Task Put(CalenderUserDTO calenderUser)
+        public async Task Put(CalendarUserDTO calendarUser)
         {
-            await _calenderUser.UpdateAsync(calenderUser);
+            await _calendarUser.UpdateAsync(calendarUser);
         }
         //[HttpGet("name/{name},adress/{adress}")]
         //public async Task<YearEventDTO> GetByDetails(string name,string adress)

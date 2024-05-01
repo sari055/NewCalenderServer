@@ -18,48 +18,48 @@ namespace CalendarApp.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CalenderYearController : ControllerBase
+    public class CalendarYearController : ControllerBase
     {
-        readonly ICalenderYearService _calenderYear;
+        readonly ICalendarYearService _calendarYear;
       
 
-        public CalenderYearController(ICalenderYearService calenderYear)
+        public CalendarYearController(ICalendarYearService calendarYear)
         {
-            _calenderYear = calenderYear;
+            _calendarYear = calendarYear;
         }
 
         // GET: api/<RolesController>
         [HttpGet]
-        public async Task<IEnumerable<CalenderYearDTO>> Get()
+        public async Task<IEnumerable<CalendarYearDTO>> Get()
         {
-            return await _calenderYear.GetListAsync();
+            return await _calendarYear.GetListAsync();
         }
         [HttpGet("{id}")]
-        public async Task<CalenderYearDTO> GetById(int id)
+        public async Task<CalendarYearDTO> GetById(int id)
         {
-            return await _calenderYear.GetByIdAsync(id);
+            return await _calendarYear.GetByIdAsync(id);
         }
         [HttpDelete]
         public async Task Delete(int id)
         {
-            await _calenderYear.DeleteAsync(id);
+            await _calendarYear.DeleteAsync(id);
         }
         
         [HttpPost]
-        public async Task Post([FromBody] CalenderYearModel calenderYear)
+        public async Task Post([FromBody] CalendarYearModel calendarYear)
         {
           //  Debug.WriteLine(order.IdParent);
 
-            await _calenderYear.AddAsync(new CalenderYearDTO
+            await _calendarYear.AddAsync(new CalendarYearDTO
             {  
-                 CalenderId=calenderYear.CalenderId,
-                 Year=calenderYear.Year,
+                 CalendarId=calendarYear.CalendarId,
+                 Year=calendarYear.Year,
             });
         }
         [HttpPut]
-        public async Task Put(CalenderYearDTO calenderYear)
+        public async Task Put(CalendarYearDTO calendarYear)
         {
-            await _calenderYear.UpdateAsync(calenderYear);
+            await _calendarYear.UpdateAsync(calendarYear);
         }
         //[HttpGet("name/{name},adress/{adress}")]
         //public async Task<YearEventDTO> GetByDetails(string name,string adress)

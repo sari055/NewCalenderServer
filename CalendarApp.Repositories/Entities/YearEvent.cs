@@ -14,11 +14,11 @@ namespace Repository.Entities
         [Required]
         public int EventId { get; set; }
         [Required]
-        public int CalenderId { get; set; }
+        public int CalendarId { get; set; }
         [Required]
         public DateTime GregorianDate { get; set; }
 
         public Event Event { get; set; }
-        public Calender Calender { get; set; }
+        public Calendar Calendar { get; set; }
     }
 }

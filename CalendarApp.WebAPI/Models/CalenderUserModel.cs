@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalendarApp.Repositories.Entities
 {
-    public class CalenderUserModel
+    public class CalendarUserModel
     {
         public int UserId { get; set; }
         public string UserType { get; set; }

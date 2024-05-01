@@ -15,9 +15,9 @@ namespace CalendarApp.Services
             CreateMap<SiteUser, SiteUserDTO>().ReverseMap();
             CreateMap<Level, LevelDTO>().ReverseMap();
             CreateMap<Event, EventDTO>().ReverseMap();
-            CreateMap<Calender, CalenderDTO>().ReverseMap();
-            CreateMap<CalenderUser, CalenderUserDTO>().ReverseMap();
-            CreateMap<CalenderYear, CalenderYearDTO>().ReverseMap();
+            CreateMap<Calendar, CalendarDTO>().ReverseMap();
+            CreateMap<CalendarUser, CalendarUserDTO>().ReverseMap();
+            CreateMap<CalendarYear, CalendarYearDTO>().ReverseMap();
             CreateMap<User, UserDTO>().ReverseMap();
         }
     }

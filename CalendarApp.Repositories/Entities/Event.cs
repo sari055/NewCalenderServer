@@ -12,7 +12,7 @@ namespace Repository.Entities
         [Required]
         public int Id { get; set; }
         [Required]
-        public int CalenderId { get; set; }
+        public int CalendarId { get; set; }
         public string EventType { get; set; }
         public string HebrewDate { get; set; }
         [Required]
@@ -22,7 +22,7 @@ namespace Repository.Entities
         public bool OneTimeEvent { get; set; }
 
 
-        public Calender Calender { get; set; }
+        public Calendar Calendar { get; set; }
         public User User { get; set; }
     }
 }

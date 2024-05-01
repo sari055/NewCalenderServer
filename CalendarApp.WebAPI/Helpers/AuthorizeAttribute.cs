@@ -12,8 +12,8 @@ namespace CalendarApp.WebAPI.Helpers
     {
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            var user = (SiteUserDTO)context.HttpContext.Items["User"];
-            if (user == null)
+            var siteUserId = context.HttpContext.Items["siteUserId"];
+            if (siteUserId == null)
             {
                 // not logged in
                 context.Result = new JsonResult(new { message = "Unauthorized" }) { StatusCode = StatusCodes.Status401Unauthorized };

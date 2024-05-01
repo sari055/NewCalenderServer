@@ -11,7 +11,7 @@ namespace CalendarApp.Common.DTOs
     public class EventDTO
     {
         public int Id { get; set; }
-        public int CalenderId { get; set; }
+        public int CalendarId { get; set; }
         public string EventType { get; set; }
         public string HebrewDate { get; set; }
         public int UserId { get; set; }
@@ -19,7 +19,7 @@ namespace CalendarApp.Common.DTOs
         public bool OneTimeEvent { get; set; }
 
 
-        public CalenderDTO Calender { get; set; }
+        public CalendarDTO Calendar { get; set; }
         public UserDTO User { get; set; }
     }
 }

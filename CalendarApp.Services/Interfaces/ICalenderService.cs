@@ -1,4 +1,5 @@
 ﻿using CalendarApp.Common.DTOs;
+using CalendarApp.Repositories.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,18 +8,19 @@ using System.Threading.Tasks;
 
 namespace CalendarApp.Services.Interfaces
 {
-    public interface ICalenderService
+    public interface ICalendarService
     {
-        Task<IEnumerable<CalenderDTO>> GetListAsync();
+        Task<IEnumerable<CalendarDTO>> GetListAsync();
 
-        Task<CalenderDTO> GetByIdAsync(int id);
+        Task<CalendarDTO> GetByIdAsync(int id);
 
-        Task<CalenderDTO> AddAsync(CalenderDTO calender);
+        Task<CalendarDTO> AddAsync(CalendarDTO calendar);
 
-        Task<CalenderDTO> UpdateAsync(CalenderDTO calender);
+        Task<CalendarDTO> UpdateAsync(CalendarDTO calendar);
 
         Task DeleteAsync(int id);
 
-        Task<IEnumerable<CalenderDTO>> GetCalendarsBySiteUserId(int siteUserId);
+        Task<IEnumerable<CalendarDTO>> GetCalendarsBySiteUserId(int siteUserId);
+        Task<IEnumerable<CalendarUserDTO>> GetUsersByCalendar(int siteUserId, int calendarId);
     }
 }

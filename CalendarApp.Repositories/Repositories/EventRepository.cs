@@ -19,11 +19,11 @@ namespace CalendarApp.Repositories.Repositories
             _context = context;
         }
        
-        public async Task<Event> AddAsync(int calenderId, string eventType, string hebrewDate, int userId, string eventYear, bool oneTimeEvent)
+        public async Task<Event> AddAsync(int calendarId, string eventType, string hebrewDate, int userId, string eventYear, bool oneTimeEvent)
         {
             var newEvent = new Event
             { 
-                CalenderId = calenderId,
+                CalendarId = calendarId,
                 EventType = eventType,
                 HebrewDate = hebrewDate,
                 UserId = userId,

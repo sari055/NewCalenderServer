@@ -31,7 +31,7 @@ namespace CalendarApp.Services.Services
         {
             return _mapper.Map<YearEventDTO>(await _yearEvent.GetByIdAsync(id));
         }
-        //public async Task<YearEventDTO> GetOrderIdAsync(int eventId ,int calenderId, DateOnly gregorianDate)
+        //public async Task<YearEventDTO> GetOrderIdAsync(int eventId ,int calendarId, DateOnly gregorianDate)
         //{
         //    return _mapper.Map<YearEventDTO>(await _yearEvent.GetByDetailsAsync(name,adress));
         //}
@@ -45,7 +45,7 @@ namespace CalendarApp.Services.Services
         public async Task<YearEventDTO> AddAsync(YearEventDTO yearEvent)
         {
             
-            return _mapper.Map<YearEventDTO>(await _yearEvent.AddAsync(yearEvent.EventId,yearEvent.CalenderId,yearEvent.GregorianDate));
+            return _mapper.Map<YearEventDTO>(await _yearEvent.AddAsync(yearEvent.EventId,yearEvent.CalendarId,yearEvent.GregorianDate));
         }
 
         public async Task<YearEventDTO> UpdateAsync(YearEventDTO yearEvent)

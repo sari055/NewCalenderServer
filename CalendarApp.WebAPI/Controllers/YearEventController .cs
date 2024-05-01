@@ -53,7 +53,7 @@ namespace CalendarApp.WebAPI.Controllers
             await _yearEvent.AddAsync(new YearEventDTO
             {  
                 EventId = yearEvent.EventId,
-                CalenderId = yearEvent.CalenderId,
+                CalendarId = yearEvent.CalendarId,
                 GregorianDate = yearEvent.GregorianDate,
             });
         }

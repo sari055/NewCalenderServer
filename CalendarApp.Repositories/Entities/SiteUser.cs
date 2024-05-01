@@ -21,6 +21,6 @@ namespace Repository.Entities
         public string Password { get; set; }
 
         public List<User> Users { get; set; }
-        public List<Calender> Calenders { get; set; }
+        public List<Calendar> Calendars { get; set; }
     }
 }

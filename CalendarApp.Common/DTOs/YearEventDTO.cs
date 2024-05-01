@@ -13,10 +13,10 @@ namespace CalendarApp.Common.DTOs
 
         public int Id { get; set; }
         public int EventId { get; set; }
-        public int CalenderId { get; set; }
+        public int CalendarId { get; set; }
         public DateTime GregorianDate { get; set; }
 
         public EventDTO Event { get; set; }
-        public CalenderDTO Calender { get; set; }
+        public CalendarDTO Calendar { get; set; }
     }
 }

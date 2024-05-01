@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace CalendarApp.Services.Interfaces
 {
-    public interface ICalenderUserService
+    public interface ICalendarUserService
     {
-        Task<IEnumerable<CalenderUserDTO>> GetListAsync(int userId);
+        Task<IEnumerable<CalendarUserDTO>> GetListAsync(int userId);
 
-        Task<CalenderUserDTO> GetByIdAsync(int id);
+        Task<CalendarUserDTO> GetByIdAsync(int id);
 
-        Task<CalenderUserDTO> AddAsync(CalenderUserDTO calenderUser);
+        Task<CalendarUserDTO> AddAsync(CalendarUserDTO calendarUser);
 
-        Task<CalenderUserDTO> UpdateAsync(CalenderUserDTO calenderUser);
+        Task<CalendarUserDTO> UpdateAsync(CalendarUserDTO calendarUser);
 
         Task DeleteAsync(int id);
     }

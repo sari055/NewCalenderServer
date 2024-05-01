@@ -18,9 +18,9 @@ namespace CalendarApp.Context
         public DbSet<User> Users { get; set; }
         public DbSet<Level> Levels { get; set; }
         public DbSet<Event> Events { get; set; }
-        public DbSet<Calender> Calenders { get; set; }
-        public DbSet<CalenderYear> CalenderYears { get; set; }
-        public DbSet<CalenderUser> CalenderUsers { get; set; }
+        public DbSet<Calendar> Calendars { get; set; }
+        public DbSet<CalendarYear> CalendarYears { get; set; }
+        public DbSet<CalendarUser> CalendarUsers { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(
@@ -30,20 +30,21 @@ namespace CalendarApp.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //set relationships
-            modelBuilder.Entity<Calender>()
-                .HasMany(c => c.CalenderUsers)
-                .WithOne(cu => cu.Calender)
-                .HasForeignKey(cu => cu.CalenderId);
+            modelBuilder.Entity<Calendar>()
+                .HasMany(c => c.CalendarUsers)
+                .WithOne(cu => cu.Calendar)
+                .HasForeignKey(cu => cu.CalendarId);
 
-            modelBuilder.Entity<CalenderUser>()
-                .HasOne(cu => cu.User)
-                .WithOne(d => d.CalenderUser)
-                .HasForeignKey<CalenderUser>(cu => cu.UserId);
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.CalendarUsers)
+                .WithOne(cu => cu.User)
+                .HasForeignKey(cu => cu.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<CalenderUser>()
+            modelBuilder.Entity<CalendarUser>()
                 .HasOne(cu => cu.User)
-                .WithOne(d => d.CalenderUser)
-                .HasForeignKey<CalenderUser>(cu => cu.UserId)
+                .WithMany(u => u.CalendarUsers)
+                .HasForeignKey(cu => cu.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<User>()
@@ -82,7 +83,7 @@ namespace CalendarApp.Context
                 .OnDelete(DeleteBehavior.Restrict);
 
             //convert enums to string
-            modelBuilder.Entity<CalenderUser>().Property(u => u.UserType).HasConversion<string>();
+            modelBuilder.Entity<CalendarUser>().Property(u => u.UserType).HasConversion<string>();
             base.OnModelCreating(modelBuilder);
         }
     }

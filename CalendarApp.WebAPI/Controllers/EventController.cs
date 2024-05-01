@@ -44,7 +44,7 @@ namespace CalendarApp.WebAPI.Controllers
 
             await _eevent.AddAsync(new EventDTO
             {  
-               CalenderId = eevent.CalenderId,
+               CalendarId = eevent.CalendarId,
                EventType = eevent.EventType,
                EventYear = eevent.EventYear,
                HebrewDate = eevent.HebrewDate,

@@ -18,9 +18,9 @@ namespace CalendarApp.Repositories.Interfaces
 		DbSet<User> Users { get; set; }
         DbSet<Level> Levels { get; set; }	
 		DbSet<Event> Events { get; set; }
-		DbSet<Calender> Calenders { get; set; }
-		DbSet<CalenderUser> CalenderUsers { get; set; }
-		DbSet<CalenderYear> CalenderYears { get; set; }
+		DbSet<Calendar> Calendars { get; set; }
+		DbSet<CalendarUser> CalendarUsers { get; set; }
+		DbSet<CalendarYear> CalendarYears { get; set; }
 		
 		int SaveChanges();
 		Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken));

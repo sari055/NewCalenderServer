@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CalendarApp.Repositories.Entities
 {
-    public class CalenderYearModel
+    public class CalendarYearModel
     {
-        public int CalenderId { get; set; }
+        public int CalendarId { get; set; }
         public int Year { get; set; }
     }
 }

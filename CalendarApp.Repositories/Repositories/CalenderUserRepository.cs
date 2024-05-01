@@ -10,47 +10,47 @@ using System.Threading.Tasks;
 
 namespace CalendarApp.Repositories.Repositories
 {
-    public class CalenderUserRepository : ICalenderUserRepository
+    public class CalendarUserRepository : ICalendarUserRepository
     {
         readonly IContext _context;
 
-        public CalenderUserRepository(IContext context)
+        public CalendarUserRepository(IContext context)
         {
             _context = context;
         }
        
-        public async Task<CalenderUser> AddAsync(int userId, int calenderId ,UserType userType)
+        public async Task<CalendarUser> AddAsync(int userId, int calendarId ,UserType userType)
         {
 
-            var newCalenderUser = new CalenderUser
+            var newCalendarUser = new CalendarUser
             { 
                 UserId = userId, 
-                CalenderId = calenderId,
+                CalendarId = calendarId,
                 UserType = userType
                 //LevelId = levelId,
                 //FamilyId = familyId
             } ;
-            await _context.CalenderUsers.AddAsync(newCalenderUser);
+            await _context.CalendarUsers.AddAsync(newCalendarUser);
             await _context.SaveChangesAsync();
-            return newCalenderUser;
+            return newCalendarUser;
         }
 
         public async Task DeleteAsync(int id)
         {
-            var calenderUser = await GetByIdAsync(id);
-            _context.CalenderUsers.Remove(calenderUser);
+            var calendarUser = await GetByIdAsync(id);
+            _context.CalendarUsers.Remove(calendarUser);
             await _context.SaveChangesAsync();
             
         }
 
-        public async Task<List<CalenderUser>> GetAllAsync()
+        public async Task<List<CalendarUser>> GetAllAsync()
         {
-            return await _context.CalenderUsers.ToListAsync();
+            return await _context.CalendarUsers.ToListAsync();
         }
 
-        public async Task<CalenderUser> GetByIdAsync(int id)
+        public async Task<CalendarUser> GetByIdAsync(int id)
         {
-            return await _context.CalenderUsers.FindAsync(id);
+            return await _context.CalendarUsers.FindAsync(id);
         }
 
       
@@ -60,11 +60,11 @@ namespace CalendarApp.Repositories.Repositories
         //    return parentsList.Find(u => u.Tz == tz).Id;
        
         //}
-        public async Task<CalenderUser> UpdateAsync(CalenderUser calenderUser)
+        public async Task<CalendarUser> UpdateAsync(CalendarUser calendarUser)
         {
-            var updatedCalenderUser = _context.CalenderUsers.Update(calenderUser);
+            var updatedCalendarUser = _context.CalendarUsers.Update(calendarUser);
             await _context.SaveChangesAsync();
-            return updatedCalenderUser.Entity;
+            return updatedCalendarUser.Entity;
         }
 
         

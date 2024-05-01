@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace CalendarApp.Repositories.Interfaces
 {
-    public interface ICalenderYearRepository
+    public interface ICalendarYearRepository
     {
-        Task<List<CalenderYear>> GetAllAsync();
+        Task<List<CalendarYear>> GetAllAsync();
 
-        Task<CalenderYear> GetByIdAsync(int id);
+        Task<CalendarYear> GetByIdAsync(int id);
     
-        Task<CalenderYear> AddAsync( int calenderId,int year);
+        Task<CalendarYear> AddAsync( int calendarId,int year);
 
-        Task<CalenderYear> UpdateAsync(CalenderYear calenderYear);
+        Task<CalendarYear> UpdateAsync(CalendarYear calendarYear);
         
 
         Task DeleteAsync(int id);

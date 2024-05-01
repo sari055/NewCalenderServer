@@ -16,45 +16,45 @@ using static Azure.Core.HttpHeader;
 
 namespace CalendarApp.Services.Services
 {
-    public class CalenderYearService : ICalenderYearService
+    public class CalendarYearService : ICalendarYearService
     {
-        private readonly ICalenderYearRepository _calenderYear;
+        private readonly ICalendarYearRepository _calendarYear;
         private readonly IMapper _mapper;
 
-        public CalenderYearService(ICalenderYearRepository calenderYear, IMapper mapper)
+        public CalendarYearService(ICalendarYearRepository calendarYear, IMapper mapper)
         {
-            _calenderYear = calenderYear;
+            _calendarYear = calendarYear;
             _mapper = mapper;
         }
 
-        public async Task<CalenderYearDTO> GetByIdAsync(int id)
+        public async Task<CalendarYearDTO> GetByIdAsync(int id)
         {
-            return _mapper.Map<CalenderYearDTO>(await _calenderYear.GetByIdAsync(id));
+            return _mapper.Map<CalendarYearDTO>(await _calendarYear.GetByIdAsync(id));
         }
        
-        public async Task<CalenderYearDTO> GetOrderIdAsync(int id)
+        public async Task<CalendarYearDTO> GetOrderIdAsync(int id)
         {
-            return _mapper.Map<CalenderYearDTO>(await _calenderYear.GetByIdAsync(id));
+            return _mapper.Map<CalendarYearDTO>(await _calendarYear.GetByIdAsync(id));
         }
-        public async Task<IEnumerable<CalenderYearDTO>> GetListAsync()
+        public async Task<IEnumerable<CalendarYearDTO>> GetListAsync()
         {
-            return _mapper.Map<IEnumerable<CalenderYearDTO>>(await _calenderYear.GetAllAsync());
+            return _mapper.Map<IEnumerable<CalendarYearDTO>>(await _calendarYear.GetAllAsync());
         }
 
-        public async Task<CalenderYearDTO> AddAsync(CalenderYearDTO calenderYear)
+        public async Task<CalendarYearDTO> AddAsync(CalendarYearDTO calendarYear)
         {
             
-            return _mapper.Map<CalenderYearDTO>(await _calenderYear.AddAsync(calenderYear.CalenderId,calenderYear.Year));
+            return _mapper.Map<CalendarYearDTO>(await _calendarYear.AddAsync(calendarYear.CalendarId,calendarYear.Year));
         }
 
-        public async Task<CalenderYearDTO> UpdateAsync(CalenderYearDTO calenderYear)
+        public async Task<CalendarYearDTO> UpdateAsync(CalendarYearDTO calendarYear)
         {
-            return _mapper.Map<CalenderYearDTO>(await _calenderYear.UpdateAsync(_mapper.Map<CalenderYear>(calenderYear)));
+            return _mapper.Map<CalendarYearDTO>(await _calendarYear.UpdateAsync(_mapper.Map<CalendarYear>(calendarYear)));
         }
 
         public async Task DeleteAsync(int id)
         {
-            await _calenderYear.DeleteAsync(id);
+            await _calendarYear.DeleteAsync(id);
         }
     }
 }

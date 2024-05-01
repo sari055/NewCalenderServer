@@ -14,7 +14,7 @@ namespace CalendarApp.Repositories.Interfaces
 
         Task<YearEvent> GetByIdAsync(int id);
     
-        Task<YearEvent> AddAsync(int eventId,int calenderId,DateTime gregorianDate);
+        Task<YearEvent> AddAsync(int eventId,int calendarId,DateTime gregorianDate);
 
        // Task<int> GetByDetailsAsync(string name, string adress);
         Task<YearEvent> UpdateAsync(YearEvent yearEvent);

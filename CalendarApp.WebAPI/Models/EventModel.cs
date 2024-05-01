@@ -8,7 +8,7 @@ namespace CalendarApp.Repositories.Entities
 {
     public class EventModel
     {
-        public int CalenderId { get; set; }
+        public int CalendarId { get; set; }
         public string EventType { get; set; }
         public string HebrewDate { get; set; }
         public int UserId { get; set; }

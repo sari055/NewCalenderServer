@@ -16,7 +16,7 @@ namespace CalendarApp.Services.Interfaces
         Task<YearEventDTO> AddAsync(YearEventDTO yearEvent);
 
         Task<YearEventDTO> UpdateAsync(YearEventDTO yearEvent);
-       // Task<YearEventDTO> GetOrderIdAsync(int eventId, int calenderId, DateOnly gregorianDate);
+       // Task<YearEventDTO> GetOrderIdAsync(int eventId, int calendarId, DateOnly gregorianDate);
 
         Task DeleteAsync(int id);
     }

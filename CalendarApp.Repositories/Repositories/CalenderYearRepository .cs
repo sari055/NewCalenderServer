@@ -10,43 +10,43 @@ using System.Threading.Tasks;
 
 namespace CalendarApp.Repositories.Repositories
 {
-    public class CalenderYearRepository : ICalenderYearRepository
+    public class CalendarYearRepository : ICalendarYearRepository
     {
         readonly IContext _context;
 
-        public CalenderYearRepository(IContext context)
+        public CalendarYearRepository(IContext context)
         {
             _context = context;
         }
        
-        public async Task<CalenderYear> AddAsync(int calenderId,int year)
+        public async Task<CalendarYear> AddAsync(int calendarId,int year)
         {
-            var newCalenderYear = new CalenderYear
+            var newCalendarYear = new CalendarYear
             { 
-                CalenderId = calenderId,
+                CalendarId = calendarId,
                 Year = year,
                 } ;
-            await _context.CalenderYears.AddAsync(newCalenderYear);
+            await _context.CalendarYears.AddAsync(newCalendarYear);
             await _context.SaveChangesAsync();
-            return newCalenderYear;
+            return newCalendarYear;
         }
 
         public async Task DeleteAsync(int id)
         {
             var payment = await GetByIdAsync(id);
-            _context.CalenderYears.Remove(payment);
+            _context.CalendarYears.Remove(payment);
             await _context.SaveChangesAsync();
             
         }
 
-        public async Task<List<CalenderYear>> GetAllAsync()
+        public async Task<List<CalendarYear>> GetAllAsync()
         {
-            return await _context.CalenderYears.ToListAsync();
+            return await _context.CalendarYears.ToListAsync();
         }
 
-        public async Task<CalenderYear> GetByIdAsync(int id)
+        public async Task<CalendarYear> GetByIdAsync(int id)
         {
-            return await _context.CalenderYears.FindAsync(id);
+            return await _context.CalendarYears.FindAsync(id);
         }
 
       
@@ -56,11 +56,11 @@ namespace CalendarApp.Repositories.Repositories
         //    return parentsList.Find(u => u.Tz == tz).Id;
        
         //}
-        public async Task<CalenderYear> UpdateAsync(CalenderYear calenderYear)
+        public async Task<CalendarYear> UpdateAsync(CalendarYear calendarYear)
         {
-            var updatedCalenderYear = _context.CalenderYears.Update(calenderYear);
+            var updatedCalendarYear = _context.CalendarYears.Update(calendarYear);
             await _context.SaveChangesAsync();
-            return updatedCalenderYear.Entity;
+            return updatedCalendarYear.Entity;
         }
 
         

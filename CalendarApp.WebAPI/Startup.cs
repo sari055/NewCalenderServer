@@ -39,7 +39,28 @@ namespace CalendarApp.WebAPI
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CalendarApp.WebAPI", Version = "v1" });
+                var securityScheme = new OpenApiSecurityScheme
+                {
+                    Name = "JWT Authentication",
+                    Description = "Enter JWT Bearer token **_only_**",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer", // must be lower case
+                    BearerFormat = "JWT",
+                    Reference = new OpenApiReference
+                    {
+                        Id = JwtBearerDefaults.AuthenticationScheme,
+                        Type = ReferenceType.SecurityScheme
+                    }
+                };
+
+                c.AddSecurityDefinition(securityScheme.Reference.Id, securityScheme);
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {securityScheme, new string[] { }}
+                });
             });
+
 
             //services.Configure<JWT>(Configuration.GetSection("JWT"));
 
@@ -81,6 +102,7 @@ namespace CalendarApp.WebAPI
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CalendarApp.WebAPI v1"));
+
             }
 
             using (var scope = app.ApplicationServices.CreateScope())

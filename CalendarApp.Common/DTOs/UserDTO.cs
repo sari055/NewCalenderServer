@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace CalendarApp.Repositories.Entities
@@ -22,7 +23,7 @@ namespace CalendarApp.Repositories.Entities
         public UserDTO Spouse { get; set; }
         public UserDTO Father { get; set; }
         public UserDTO Mother { get; set; }
-        public CalenderUserDTO CalenderUser { get; set; }
+        public List<CalendarUserDTO> CalendarUsers { get; set; }
 
 
         public UserDTO()  { }

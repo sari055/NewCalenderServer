@@ -15,15 +15,15 @@ namespace CalendarApp.Services.Services
         private readonly ISiteUserRepository _siteUser;
         private readonly IMapper _mapper;
         private readonly IUserService _user;
-        private readonly ICalenderService _calender;
-        private readonly ICalenderUserRepository _calenderUser;
+        private readonly ICalendarService _calendar;
+        private readonly ICalendarUserRepository _calendarUser;
 
-        public SiteUserService(ISiteUserRepository siteUser, IUserService user, ICalenderService calender, ICalenderUserRepository calenderUser, IMapper mapper)
+        public SiteUserService(ISiteUserRepository siteUser, IUserService user, ICalendarService calendar, ICalendarUserRepository calendarUser, IMapper mapper)
         {
             _siteUser = siteUser;
             _user = user;
-            _calender = calender;
-            _calenderUser = calenderUser;
+            _calendar = calendar;
+            _calendarUser = calendarUser;
             _mapper = mapper;
         }
 
@@ -67,17 +67,17 @@ namespace CalendarApp.Services.Services
             return _mapper.Map<SiteUserDTO>(await _siteUser.FindByEmailAsync(email));
         }
 
-        public async Task<SiteUserDTO> Register(SiteUserDTO siteUser, UserDTO user, CalenderDTO calender)
+        public async Task<SiteUserDTO> Register(SiteUserDTO siteUser, UserDTO user, CalendarDTO calendar)
         {
             var newSiteUser = await AddAsync(siteUser);
 
             user.SiteUserId = newSiteUser.Id;
             var newUser = await _user.AddAsync(user);
 
-            calender.DirectorId = newUser.Id;
-            var newCalendar = await _calender.AddAsync(calender);
+            calendar.DirectorId = newUser.Id;
+            var newCalendar = await _calendar.AddAsync(calendar);
 
-            await _calenderUser.AddAsync(newUser.Id, newCalendar.Id, UserType.Admin);
+            await _calendarUser.AddAsync(newUser.Id, newCalendar.Id, UserType.Admin);
             return newSiteUser;
         }
     }

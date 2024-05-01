@@ -49,6 +49,13 @@ namespace CalendarApp.WebAPI.Controllers
         {
             return await _siteUser.GetByIdAsync(id);
         }
+        [Authorize]
+        [HttpGet("user")]
+        public async Task<SiteUserDTO> GetAuthorizedUser()
+        {
+            var userId = HttpContext.Items["siteUserId"];
+            return await _siteUser.GetByIdAsync((int)userId);
+        }
 
         [HttpDelete]
         public async Task Delete(int id)
@@ -78,7 +85,7 @@ namespace CalendarApp.WebAPI.Controllers
             {
                 return BadRequest(new { message = $"המייל {request.Email} כבר קיים במערכת" });
             }
-            await _siteUser.Register(request.SiteUser, request.User, request.Calender);
+            await _siteUser.Register(request.SiteUser, request.User, request.Calendar);
             return Ok();
         }
 

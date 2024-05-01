@@ -19,10 +19,10 @@ namespace CalendarApp.WebAPI.Controllers
         {
             try
             {
-                var user = (SiteUserDTO)HttpContext.Items["User"];
+                var steUserId = (SiteUserDTO)HttpContext.Items["steUserId"];
                 string fileExtension = Path.GetExtension(file.FormFile.FileName);
                 //TODO change file name to use tz from user
-                string fileName = $"{user.Id}{fileExtension}";
+                string fileName = $"{steUserId}{fileExtension}";
 
                 string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
 

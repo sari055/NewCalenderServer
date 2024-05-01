@@ -30,6 +30,6 @@ namespace Repository.Entities
         public User Spouse { get; set; }
         public User Father { get; set; }
         public User Mother { get; set; }
-        public CalenderUser CalenderUser { get; set; }
+        public List<CalendarUser> CalendarUsers { get; set; }
     }
 }

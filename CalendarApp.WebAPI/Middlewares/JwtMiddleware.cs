@@ -9,6 +9,7 @@ using System;
 using System.Linq;
 using CalendarApp.WebAPI.Helpers;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CalendarApp.WebAPI.Middlewares
 {
@@ -24,17 +25,28 @@ namespace CalendarApp.WebAPI.Middlewares
             _configuration = configuration;
         }
 
-        public async Task Invoke(HttpContext context, ISiteUserService siteUserService)
+        public async Task Invoke(HttpContext context)
         {
-            var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
+            try
+            {
+                var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
 
-            if (token != null)
-                attachUserToContext(context, siteUserService, token);
+                if (token != null)
+                    attachUserToContext(context, token);
 
-            await _next(context);
+                await _next(context);
+
+            }
+            catch (Exception ex)
+            {
+                // Token validation failed, return error response to the client
+                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                await context.Response.WriteAsync(ex.Message);
+                return;
+            }
         }
 
-        private async void attachUserToContext(HttpContext context, ISiteUserService siteUserService, string token)
+        private void attachUserToContext(HttpContext context, string token)
         {
             try
             {
@@ -54,14 +66,14 @@ namespace CalendarApp.WebAPI.Middlewares
                 var siteUserId = int.Parse(jwtToken.Claims.First(x => x.Type == "id").Value);
 
                 // attach user to context on successful jwt validation
-                context.Items["User"] = await siteUserService.GetByIdAsync(siteUserId);
+                context.Items["siteUserId"] = siteUserId;
             }
-            catch (Exception ex) 
+            catch (Exception)
             {
-                throw ex;
-                // do nothing if jwt validation fails
-                // user is not attached to context so request won't have access to secure routes
+                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                throw new Exception("Unauthorized: Invalid token");
             }
+
         }
     }
 }

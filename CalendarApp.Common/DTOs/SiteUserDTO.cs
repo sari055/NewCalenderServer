@@ -21,7 +21,7 @@ namespace CalendarApp.Repositories.Entities
         public string Password { get; set; }
 
         public List<UserDTO> Users { get; set; }
-        public List<CalenderDTO> Calenders { get; set; }
+        public List<CalendarDTO> Calendars { get; set; }
 
         public SiteUserDTO(string firstName, string lastName, string email, string password)
         {

@@ -22,7 +22,7 @@ namespace CalendarApp.Context.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Repository.Entities.Calender", b =>
+            modelBuilder.Entity("Repository.Entities.Calendar", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,10 +45,10 @@ namespace CalendarApp.Context.Migrations
 
                     b.HasIndex("SiteUserId");
 
-                    b.ToTable("Calenders");
+                    b.ToTable("Calendars");
                 });
 
-            modelBuilder.Entity("Repository.Entities.CalenderUser", b =>
+            modelBuilder.Entity("Repository.Entities.CalendarUser", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -56,7 +56,7 @@ namespace CalendarApp.Context.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CalenderId")
+                    b.Property<int>("CalendarId")
                         .HasColumnType("int");
 
                     b.Property<int>("UserId")
@@ -68,15 +68,14 @@ namespace CalendarApp.Context.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CalenderId");
+                    b.HasIndex("CalendarId");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("UserId");
 
-                    b.ToTable("CalenderUsers");
+                    b.ToTable("CalendarUsers");
                 });
 
-            modelBuilder.Entity("Repository.Entities.CalenderYear", b =>
+            modelBuilder.Entity("Repository.Entities.CalendarYear", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -84,7 +83,7 @@ namespace CalendarApp.Context.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CalenderId")
+                    b.Property<int>("CalendarId")
                         .HasColumnType("int");
 
                     b.Property<int>("Year")
@@ -92,9 +91,9 @@ namespace CalendarApp.Context.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CalenderId");
+                    b.HasIndex("CalendarId");
 
-                    b.ToTable("CalenderYears");
+                    b.ToTable("CalendarYears");
                 });
 
             modelBuilder.Entity("Repository.Entities.Event", b =>
@@ -105,7 +104,7 @@ namespace CalendarApp.Context.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CalenderId")
+                    b.Property<int>("CalendarId")
                         .HasColumnType("int");
 
                     b.Property<string>("EventType")
@@ -125,7 +124,7 @@ namespace CalendarApp.Context.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CalenderId");
+                    b.HasIndex("CalendarId");
 
                     b.HasIndex("UserId");
 
@@ -246,7 +245,7 @@ namespace CalendarApp.Context.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CalenderId")
+                    b.Property<int>("CalendarId")
                         .HasColumnType("int");
 
                     b.Property<int>("EventId")
@@ -257,14 +256,14 @@ namespace CalendarApp.Context.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CalenderId");
+                    b.HasIndex("CalendarId");
 
                     b.HasIndex("EventId");
 
                     b.ToTable("YearEvents");
                 });
 
-            modelBuilder.Entity("Repository.Entities.Calender", b =>
+            modelBuilder.Entity("Repository.Entities.Calendar", b =>
                 {
                     b.HasOne("Repository.Entities.User", "Director")
                         .WithMany()
@@ -273,47 +272,47 @@ namespace CalendarApp.Context.Migrations
                         .IsRequired();
 
                     b.HasOne("Repository.Entities.SiteUser", null)
-                        .WithMany("Calenders")
+                        .WithMany("Calendars")
                         .HasForeignKey("SiteUserId");
 
                     b.Navigation("Director");
                 });
 
-            modelBuilder.Entity("Repository.Entities.CalenderUser", b =>
+            modelBuilder.Entity("Repository.Entities.CalendarUser", b =>
                 {
-                    b.HasOne("Repository.Entities.Calender", "Calender")
-                        .WithMany("CalenderUsers")
-                        .HasForeignKey("CalenderId")
+                    b.HasOne("Repository.Entities.Calendar", "Calendar")
+                        .WithMany("CalendarUsers")
+                        .HasForeignKey("CalendarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Repository.Entities.User", "User")
-                        .WithOne("CalenderUser")
-                        .HasForeignKey("Repository.Entities.CalenderUser", "UserId")
+                        .WithMany("CalendarUsers")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("Calender");
+                    b.Navigation("Calendar");
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Repository.Entities.CalenderYear", b =>
+            modelBuilder.Entity("Repository.Entities.CalendarYear", b =>
                 {
-                    b.HasOne("Repository.Entities.Calender", "Calender")
-                        .WithMany("CalenderYears")
-                        .HasForeignKey("CalenderId")
+                    b.HasOne("Repository.Entities.Calendar", "Calendar")
+                        .WithMany("CalendarYears")
+                        .HasForeignKey("CalendarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Calender");
+                    b.Navigation("Calendar");
                 });
 
             modelBuilder.Entity("Repository.Entities.Event", b =>
                 {
-                    b.HasOne("Repository.Entities.Calender", "Calender")
+                    b.HasOne("Repository.Entities.Calendar", "Calendar")
                         .WithMany("Events")
-                        .HasForeignKey("CalenderId")
+                        .HasForeignKey("CalendarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -323,7 +322,7 @@ namespace CalendarApp.Context.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("Calender");
+                    b.Navigation("Calendar");
 
                     b.Navigation("User");
                 });
@@ -360,9 +359,9 @@ namespace CalendarApp.Context.Migrations
 
             modelBuilder.Entity("Repository.Entities.YearEvent", b =>
                 {
-                    b.HasOne("Repository.Entities.Calender", "Calender")
+                    b.HasOne("Repository.Entities.Calendar", "Calendar")
                         .WithMany()
-                        .HasForeignKey("CalenderId")
+                        .HasForeignKey("CalendarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -372,30 +371,30 @@ namespace CalendarApp.Context.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("Calender");
+                    b.Navigation("Calendar");
 
                     b.Navigation("Event");
                 });
 
-            modelBuilder.Entity("Repository.Entities.Calender", b =>
+            modelBuilder.Entity("Repository.Entities.Calendar", b =>
                 {
-                    b.Navigation("CalenderUsers");
+                    b.Navigation("CalendarUsers");
 
-                    b.Navigation("CalenderYears");
+                    b.Navigation("CalendarYears");
 
                     b.Navigation("Events");
                 });
 
             modelBuilder.Entity("Repository.Entities.SiteUser", b =>
                 {
-                    b.Navigation("Calenders");
+                    b.Navigation("Calendars");
 
                     b.Navigation("Users");
                 });
 
             modelBuilder.Entity("Repository.Entities.User", b =>
                 {
-                    b.Navigation("CalenderUser");
+                    b.Navigation("CalendarUsers");
                 });
 #pragma warning restore 612, 618
         }

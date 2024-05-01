@@ -17,7 +17,7 @@ namespace CalendarApp.Services.Interfaces
         Task<SiteUserDTO> GetByIdAsync(int id);
 
         Task<SiteUserDTO> AddAsync(SiteUserDTO user);
-        Task<SiteUserDTO> Register(SiteUserDTO siteUser, UserDTO user, CalenderDTO calender);
+        Task<SiteUserDTO> Register(SiteUserDTO siteUser, UserDTO user, CalendarDTO calendar);
 
         Task<SiteUserDTO> UpdateAsync(SiteUserDTO user);
 

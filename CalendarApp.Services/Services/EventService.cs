@@ -43,7 +43,7 @@ namespace CalendarApp.Services.Services
         public async Task<EventDTO> AddAsync(EventDTO eevent)
         {
             
-            return _mapper.Map<EventDTO>(await _event.AddAsync(eevent.CalenderId,eevent.EventType,eevent.HebrewDate,eevent.UserId,eevent.EventYear,eevent.OneTimeEvent));
+            return _mapper.Map<EventDTO>(await _event.AddAsync(eevent.CalendarId,eevent.EventType,eevent.HebrewDate,eevent.UserId,eevent.EventYear,eevent.OneTimeEvent));
         }
 
         public async Task<EventDTO> UpdateAsync(EventDTO eevent)

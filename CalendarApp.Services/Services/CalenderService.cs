@@ -13,55 +13,61 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using static Azure.Core.HttpHeader;
 using Microsoft.EntityFrameworkCore;
+using CalendarApp.Repositories.Entities;
 
 namespace CalendarApp.Services.Services
 {
-    public class CalenderService : ICalenderService
+    public class CalendarService : ICalendarService
     {
-        private readonly ICalenderRepository _calender;
+        private readonly ICalendarRepository _calendar;
         private readonly IMapper _mapper;
-        private readonly ICalenderUserService _calenderUserService;
+        private readonly ICalendarUserService _calendarUserService;
 
-        public CalenderService(ICalenderRepository calender, ICalenderUserService calenderUser, IMapper mapper)
+        public CalendarService(ICalendarRepository calendar, ICalendarUserService calendarUser, IMapper mapper)
         {
-            _calender = calender;
+            _calendar = calendar;
             _mapper = mapper;
-            _calenderUserService = calenderUser;
+            _calendarUserService = calendarUser;
         }
 
-        public async Task<CalenderDTO> GetByIdAsync(int id)
+        public async Task<CalendarDTO> GetByIdAsync(int id)
         {
-            return _mapper.Map<CalenderDTO>(await _calender.GetByIdAsync(id));
-        }
-       
-        public async Task<CalenderDTO> GetOrderIdAsync(int id)
-        {
-            return _mapper.Map<CalenderDTO>(await _calender.GetByIdAsync(id));
-        }
-        public async Task<IEnumerable<CalenderDTO>> GetListAsync()
-        {
-            return _mapper.Map<IEnumerable<CalenderDTO>>(await _calender.GetAllAsync());
+            return _mapper.Map<CalendarDTO>(await _calendar.GetByIdAsync(id));
         }
 
-        public async Task<CalenderDTO> AddAsync(CalenderDTO calender)
+        public async Task<CalendarDTO> GetOrderIdAsync(int id)
         {
-            Calender newCalender = await _calender.AddAsync(calender.DirectorId, calender.GroupName);
-            return _mapper.Map<CalenderDTO>(newCalender);
+            return _mapper.Map<CalendarDTO>(await _calendar.GetByIdAsync(id));
+        }
+        public async Task<IEnumerable<CalendarDTO>> GetListAsync()
+        {
+            return _mapper.Map<IEnumerable<CalendarDTO>>(await _calendar.GetAllAsync());
         }
 
-        public async Task<CalenderDTO> UpdateAsync(CalenderDTO calender)
+        public async Task<CalendarDTO> AddAsync(CalendarDTO calendar)
         {
-            return _mapper.Map<CalenderDTO>(await _calender.UpdateAsync(_mapper.Map<Calender>(calender)));
+            Calendar newCalendar = await _calendar.AddAsync(calendar.DirectorId, calendar.GroupName);
+            return _mapper.Map<CalendarDTO>(newCalendar);
+        }
+
+        public async Task<CalendarDTO> UpdateAsync(CalendarDTO calendar)
+        {
+            return _mapper.Map<CalendarDTO>(await _calendar.UpdateAsync(_mapper.Map<Calendar>(calendar)));
         }
 
         public async Task DeleteAsync(int id)
         {
-            await _calender.DeleteAsync(id);
+            await _calendar.DeleteAsync(id);
         }
 
-        public async Task<IEnumerable<CalenderDTO>> GetCalendarsBySiteUserId(int siteUserId)
+        public async Task<IEnumerable<CalendarDTO>> GetCalendarsBySiteUserId(int siteUserId)
         {
-            return _mapper.Map<IEnumerable<CalenderDTO>> (await _calender.GetCalendarsBySiteUserId(siteUserId));
+            return _mapper.Map<IEnumerable<CalendarDTO>>(await _calendar.GetCalendarsBySiteUserId(siteUserId));
+        }
+
+        public async Task<IEnumerable<CalendarUserDTO>> GetUsersByCalendar(int siteUserId, int calendarId)
+        {
+            return _mapper.Map<IEnumerable<CalendarUserDTO>>(await _calendar.GetUsersByCalendar(siteUserId, calendarId));
         }
     }
 }

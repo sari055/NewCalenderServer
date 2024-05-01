@@ -16,9 +16,9 @@ namespace CalendarApp.Repositories.Repositories
             services.AddScoped<IEventRepository, EventRepository>();
             services.AddScoped<ISiteUserRepository, SiteUserRepository>();
             services.AddScoped<ILevelRepository, LevelRepository>();
-            services.AddScoped<ICalenderRepository, CalenderRepository>();
-            services.AddScoped<ICalenderUserRepository, CalenderUserRepository>();
-            services.AddScoped<ICalenderYearRepository, CalenderYearRepository>();
+            services.AddScoped<ICalendarRepository, CalendarRepository>();
+            services.AddScoped<ICalendarUserRepository, CalendarUserRepository>();
+            services.AddScoped<ICalendarYearRepository, CalendarYearRepository>();
             services.AddScoped<IUserRepository,UserRepository>();
             
             return services;

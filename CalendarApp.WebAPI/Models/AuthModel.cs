@@ -20,7 +20,7 @@ namespace CalendarApp.Repositories.Entities
 
         private UserDTO _user;
         private SiteUserDTO _siteUser;
-        private CalenderDTO _calender;
+        private CalendarDTO _calendar;
 
         public UserDTO User
         {
@@ -46,16 +46,16 @@ namespace CalendarApp.Repositories.Entities
             }
         }
 
-        public CalenderDTO Calender
+        public CalendarDTO Calendar
         {
             get
             {
-                if (_calender == null)
+                if (_calendar == null)
                 {
-                    _calender = new CalenderDTO();
-                    _calender.GroupName = GroupName;
+                    _calendar = new CalendarDTO();
+                    _calendar.GroupName = GroupName;
                 }
-                return _calender;
+                return _calendar;
             }
         }
     }

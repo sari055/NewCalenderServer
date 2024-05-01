@@ -10,58 +10,68 @@ using System.Threading.Tasks;
 
 namespace CalendarApp.Repositories.Repositories
 {
-    public class CalenderRepository : ICalenderRepository
+    public class CalendarRepository : ICalendarRepository
     {
         readonly IContext _context;
 
-        public CalenderRepository(IContext context)
+        public CalendarRepository(IContext context)
         {
             _context = context;
         }
        
-        public async Task<Calender> AddAsync(int directorId,string groupName)
+        public async Task<Calendar> AddAsync(int directorId,string groupName)
         {
-            var newCalender = new Calender
+            var newCalendar = new Calendar
             { 
                 DirectorId = directorId,    
                 GroupName = groupName
                 } ;
-            await _context.Calenders.AddAsync(newCalender);
+            await _context.Calendars.AddAsync(newCalendar);
             await _context.SaveChangesAsync();
-            return newCalender;
+            return newCalendar;
         }
 
         public async Task DeleteAsync(int id)
         {
-            var calender = await GetByIdAsync(id);
-            _context.Calenders.Remove(calender);
+            var calendar = await GetByIdAsync(id);
+            _context.Calendars.Remove(calendar);
             await _context.SaveChangesAsync();
             
         }
 
-        public async Task<List<Calender>> GetAllAsync()
+        public async Task<List<Calendar>> GetAllAsync()
         {
-            return await _context.Calenders.ToListAsync();
+            return await _context.Calendars.ToListAsync();
         }
 
-        public async Task<Calender> GetByIdAsync(int id)
+        public async Task<Calendar> GetByIdAsync(int id)
         {
-            return await _context.Calenders.FindAsync(id);
+            return await _context.Calendars.FindAsync(id);
         }
 
-        public async Task<Calender> UpdateAsync(Calender calender)
+        public async Task<Calendar> UpdateAsync(Calendar calendar)
         {
-            var updatedCalender = _context.Calenders.Update(calender);
+            var updatedCalendar = _context.Calendars.Update(calendar);
             await _context.SaveChangesAsync();
-            return updatedCalender.Entity;
+            return updatedCalendar.Entity;
         }
 
-        public async Task<List<Calender>> GetCalendarsBySiteUserId(int siteUserId)
+        public async Task<List<Calendar>> GetCalendarsBySiteUserId(int siteUserId)
         {
-            return await _context.CalenderUsers
+            return await _context.CalendarUsers
                 .Where(calendarUser => calendarUser.User.SiteUserId == siteUserId)
-                .Select(calendarUser => calendarUser.Calender)
+                .Select(calendarUser => calendarUser.Calendar)
                 .ToListAsync();
+        }
+
+        public async Task<List<CalendarUser>> GetUsersByCalendar(int siteUserId, int calendarId)
+        {
+            var users = await _context.CalendarUsers
+                .Include(calendarUser => calendarUser.User)
+                .Where(calendarUser => calendarUser.User.SiteUserId == siteUserId && calendarUser.CalendarId == calendarId)
+                .ToListAsync();
+
+            return users;
         }
 
     }
