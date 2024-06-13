@@ -10,6 +10,8 @@ namespace CalendarApp.Services.Interfaces
 
         Task<UserDTO> GetByIdAsync(int id);
 
+        Task<UserDTO> GetByTzAsync(int tz);
+
         Task<UserDTO> AddAsync(UserDTO user);
 
         Task<UserDTO> UpdateAsync(UserDTO user);

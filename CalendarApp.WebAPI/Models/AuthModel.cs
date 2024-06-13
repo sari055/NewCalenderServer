@@ -11,10 +11,10 @@ namespace CalendarApp.Repositories.Entities
     {
         public string Email { get; set; }
         public string Password { get; set; }
-        public int Tz {  get; set; }
-        public string FirstName {  get; set; }
-        public string LastName { get ; set; }
-        public string PhoneNumbar { get; set; }
+        public int Tz { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string PhoneNumber { get; set; }
         public DateTime BornDate { get; set; }
         public string GroupName { get; set; }
 
@@ -28,7 +28,7 @@ namespace CalendarApp.Repositories.Entities
             {
                 if (_user == null)
                 {
-                    _user = new UserDTO(Tz, FirstName, LastName, BornDate, PhoneNumbar, Email);
+                    _user = new UserDTO(Tz, FirstName, LastName, BornDate, PhoneNumber, Email);
                 }
                 return _user;
             }
@@ -40,7 +40,7 @@ namespace CalendarApp.Repositories.Entities
             {
                 if (_siteUser == null)
                 {
-                    _siteUser = new SiteUserDTO(FirstName, LastName, Email, Password);
+                    _siteUser = new SiteUserDTO(FirstName, LastName, Tz, Password);
                 }
                 return _siteUser;
             }

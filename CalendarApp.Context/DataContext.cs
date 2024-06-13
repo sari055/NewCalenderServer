@@ -24,7 +24,7 @@ namespace CalendarApp.Context
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(
-           "Server=(localdb)\\mssqllocaldb;Database=Calender_DB;Trusted_Connection=True;");
+           "Server=(localdb)\\mssqllocaldb;Database=Calender1_DB;Trusted_Connection=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

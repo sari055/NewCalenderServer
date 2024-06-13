@@ -24,6 +24,11 @@ namespace CalendarApp.Services.Services
             return _mapper.Map<UserDTO>(await _user.GetByIdAsync(id));
         }
 
+        public async Task<UserDTO> GetByTzAsync(int tz)
+        {
+            return _mapper.Map<UserDTO>(await _user.GetByTzAsync(tz));
+        }
+
 
         public async Task<IEnumerable<UserDTO>> getBySiteUserAsync(int userId)
         {

@@ -65,6 +65,12 @@ namespace CalendarApp.Repositories.Repositories
             return await _context.Users.FindAsync(id);
         }
 
+        public async Task<User> GetByTzAsync(int tz)
+        {
+            return await _context.Users.FirstAsync(t => t.TZ == tz);
+        }
+
+
         public async Task<List<User>> getBySiteUserAsync(int siteUserId)
         {
             return await _context.Users.Where(d => d.SiteUserId == siteUserId).ToListAsync();

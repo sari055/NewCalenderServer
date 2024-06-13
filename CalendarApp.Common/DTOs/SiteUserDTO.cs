@@ -17,17 +17,17 @@ namespace CalendarApp.Repositories.Entities
         [Required]
         public string LastName { get; set; }
         [Required]
-        public string Email { get; set; }
+        public int Tz { get; set; }
         public string Password { get; set; }
 
         public List<UserDTO> Users { get; set; }
         public List<CalendarDTO> Calendars { get; set; }
 
-        public SiteUserDTO(string firstName, string lastName, string email, string password)
+        public SiteUserDTO(string firstName, string lastName, int tz, string password)
         {
             FirstName = firstName;
             LastName = lastName;
-            Email = email;
+            Tz = tz;
             Password = password;
         }
     }

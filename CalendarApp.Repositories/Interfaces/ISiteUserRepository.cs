@@ -14,15 +14,15 @@ namespace CalendarApp.Repositories.Interfaces
 
         Task<SiteUser> GetByIdAsync(int id);
 
-        Task<SiteUser> GetByEmailAndPassword(string email, string password);
+        Task<SiteUser> GetByTzAndPassword(int tz, string password);
 
-        Task<SiteUser> AddAsync(string firstName, string lastName, string email, string password);
+        Task<SiteUser> AddAsync(string firstName, string lastName, int tz, string password);
 
         Task<SiteUser> UpdateAsync(SiteUser user);
-        
+
 
         Task DeleteAsync(int id);
-        Task<SiteUser> FindByEmailAsync(string email);
+        Task<SiteUser> FindByTzAsync(int tz);
     }
 }
 

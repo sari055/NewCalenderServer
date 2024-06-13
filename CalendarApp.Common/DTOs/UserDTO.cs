@@ -26,15 +26,15 @@ namespace CalendarApp.Repositories.Entities
         public List<CalendarUserDTO> CalendarUsers { get; set; }
 
 
-        public UserDTO()  { }
+        public UserDTO() { }
 
-        public UserDTO(int tz, string firstName, string lastName, DateTime bornDate, string phoneNumbar, string email)
+        public UserDTO(int tz, string firstName, string lastName, DateTime bornDate, string phoneNumber, string email)
         {
             TZ = tz;
             FirstName = firstName;
             LastName = lastName;
             BornDate = bornDate;
-            PhoneNumber = phoneNumbar;
+            PhoneNumber = phoneNumber;
             Email = email;
         }
     }
