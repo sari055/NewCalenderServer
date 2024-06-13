@@ -14,6 +14,8 @@ namespace CalendarApp.Repositories.Interfaces
 
         Task<User> GetByIdAsync(int id);
 
+        Task<User> GetByTzAsync(int tz);
+
         Task<User> AddAsync(int tz, string firstName, string lastName, string phoneNumbar, string email, int spouseId, int fatherId, int motherId, DateTime bornDate, int siteUserId);
 
         Task<User> UpdateAsync(User user);

@@ -23,8 +23,8 @@ namespace CalendarApp.Services.Interfaces
 
         Task DeleteAsync(int id);
 
-        Task<SiteUserDTO> GetByEmailAndPassword(string email, string password);
-        Task<SiteUserDTO> FindByEmailAsync(string email);
+        Task<SiteUserDTO> GetByTzAndPassword(int tz, string password);
+        Task<SiteUserDTO> FindByTzAsync(int tz);
 
     }
 }

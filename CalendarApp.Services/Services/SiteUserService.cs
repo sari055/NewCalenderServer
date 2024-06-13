@@ -31,7 +31,7 @@ namespace CalendarApp.Services.Services
         {
             return _mapper.Map<SiteUserDTO>(await _siteUser.GetByIdAsync(id));
         }
-       
+
         public async Task<SiteUserDTO> GetOrderIdAsync(int id)
         {
             return _mapper.Map<SiteUserDTO>(await _siteUser.GetByIdAsync(id));
@@ -43,8 +43,8 @@ namespace CalendarApp.Services.Services
 
         public async Task<SiteUserDTO> AddAsync(SiteUserDTO user)
         {
-            
-            return _mapper.Map<SiteUserDTO>(await _siteUser.AddAsync(user.FirstName, user.LastName, user.Email,user.Password));
+
+            return _mapper.Map<SiteUserDTO>(await _siteUser.AddAsync(user.FirstName, user.LastName, user.Tz, user.Password));
         }
 
         public async Task<SiteUserDTO> UpdateAsync(SiteUserDTO user)
@@ -57,28 +57,37 @@ namespace CalendarApp.Services.Services
             await _siteUser.DeleteAsync(id);
         }
 
-        public async Task<SiteUserDTO> GetByEmailAndPassword(string email, string password)
+        public async Task<SiteUserDTO> GetByTzAndPassword(int tz, string password)
         {
-            return _mapper.Map<SiteUserDTO>(await _siteUser.GetByEmailAndPassword(email, password));
+            return _mapper.Map<SiteUserDTO>(await _siteUser.GetByTzAndPassword(tz, password));
         }
 
-        public async Task<SiteUserDTO> FindByEmailAsync(string email)
+        public async Task<SiteUserDTO> FindByTzAsync(int tz)
         {
-            return _mapper.Map<SiteUserDTO>(await _siteUser.FindByEmailAsync(email));
+            return _mapper.Map<SiteUserDTO>(await _siteUser.FindByTzAsync(tz));
         }
+
+
+
 
         public async Task<SiteUserDTO> Register(SiteUserDTO siteUser, UserDTO user, CalendarDTO calendar)
         {
-            var newSiteUser = await AddAsync(siteUser);
 
-            user.SiteUserId = newSiteUser.Id;
+            SiteUserDTO existUser = await FindByTzAsync(siteUser.Tz);
+            if (existUser == null)
+            {
+                existUser = await AddAsync(siteUser);
+            }
+            user.SiteUserId = existUser.Id;
             var newUser = await _user.AddAsync(user);
+
+
 
             calendar.DirectorId = newUser.Id;
             var newCalendar = await _calendar.AddAsync(calendar);
 
             await _calendarUser.AddAsync(newUser.Id, newCalendar.Id, UserType.Admin);
-            return newSiteUser;
+            return existUser;
         }
     }
 }

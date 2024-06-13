@@ -13,22 +13,21 @@ namespace CalendarApp.Repositories.Repositories
     public class SiteUserRepository : ISiteUserRepository
     {
         readonly IContext _context;
-        //tryy to push
 
         public SiteUserRepository(IContext context)
         {
             _context = context;
         }
-       
-        public async Task<SiteUser> AddAsync(string firstName, string lastName, string email, string password)
+
+        public async Task<SiteUser> AddAsync(string firstName, string lastName, int tz, string password)
         {
             var newSiteUser = new SiteUser
-            { 
-                FirstName=firstName,
-                LastName=lastName,
-                Email=email,
-                Password=password
-            } ;
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                Tz = tz,
+                Password = password
+            };
             await _context.SiteUsers.AddAsync(newSiteUser);
             await _context.SaveChangesAsync();
             return newSiteUser;
@@ -39,12 +38,12 @@ namespace CalendarApp.Repositories.Repositories
             var siteUser = await GetByIdAsync(id);
             _context.SiteUsers.Remove(siteUser);
             await _context.SaveChangesAsync();
-            
+
         }
 
-        public async Task<SiteUser> FindByEmailAsync(string email)
+        public async Task<SiteUser> FindByTzAsync(int tz)
         {
-            return await _context.SiteUsers.FirstOrDefaultAsync(siteUser => siteUser.Email == email);
+            return await _context.SiteUsers.FirstOrDefaultAsync(siteUser => siteUser.Tz == tz);
         }
 
         public async Task<List<SiteUser>> GetAllAsync()
@@ -52,9 +51,9 @@ namespace CalendarApp.Repositories.Repositories
             return await _context.SiteUsers.ToListAsync();
         }
 
-        public async Task<SiteUser> GetByEmailAndPassword(string email, string password)
+        public async Task<SiteUser> GetByTzAndPassword(int tz, string password)
         {
-            return await _context.SiteUsers.FirstOrDefaultAsync(user => user.Email == email && user.Password == password);
+            return await _context.SiteUsers.FirstOrDefaultAsync(user => user.Tz == tz && user.Password == password);
         }
 
         public async Task<SiteUser> GetByIdAsync(int id)
@@ -67,6 +66,6 @@ namespace CalendarApp.Repositories.Repositories
             var updatedUser = _context.SiteUsers.Update(user);
             await _context.SaveChangesAsync();
             return updatedUser.Entity;
-        }  
+        }
     }
 }

@@ -19,6 +19,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Configuration;
 using System.IdentityModel.Tokens.Jwt;
 using CalendarApp.WebAPI.Helpers;
+using Azure.Core;
 
 
 namespace CalendarApp.WebAPI.Controllers
@@ -29,6 +30,7 @@ namespace CalendarApp.WebAPI.Controllers
     {
         readonly ISiteUserService _siteUser;
         readonly ITokenService _tokenService;
+        // readonly IUserService _user;
 
         public AuthController(ISiteUserService user, ITokenService tokenService)
         {
@@ -64,26 +66,27 @@ namespace CalendarApp.WebAPI.Controllers
         }
 
         [HttpGet("login")]
-        public async Task<ActionResult> Login(string email, string password)
+        public async Task<ActionResult> Login(int tz, string password)
         {
-            SiteUserDTO siteUser = await _siteUser.GetByEmailAndPassword(email, password);
+            SiteUserDTO siteUser = await _siteUser.GetByTzAndPassword(tz, password);
 
-            if (siteUser == null) return Unauthorized("שם משתמש או סיסמה שגויים");
+            if (siteUser == null) return BadRequest(new { message = $"מספר תז לא קיים במערכת" });
+            //return Unauthorized("שם משתמש או סיסמה שגויים");
 
             siteUser.Password = string.Empty;
 
             var token = _tokenService.GenerateToken(siteUser);
 
-            return Ok(new { siteUser, token});
+            return Ok(new { siteUser, token });
         }
 
         [HttpPost("register")]
         public async Task<ActionResult<SiteUserDTO>> Post([FromBody] AuthModel request)
         {
-            var userWithSameEmail = await _siteUser.FindByEmailAsync(request.Email);
-            if (userWithSameEmail != null)
+            var userWithSameTz = await _siteUser.FindByTzAsync(request.Tz);
+            if (userWithSameTz != null)
             {
-                return BadRequest(new { message = $"המייל {request.Email} כבר קיים במערכת" });
+                return BadRequest(new { message = $"מספר תז {request.Tz} כבר קיים במערכת" });
             }
             await _siteUser.Register(request.SiteUser, request.User, request.Calendar);
             return Ok();
@@ -94,6 +97,6 @@ namespace CalendarApp.WebAPI.Controllers
         {
             await _siteUser.UpdateAsync(siteUser);
         }
-        
+
     }
 }
