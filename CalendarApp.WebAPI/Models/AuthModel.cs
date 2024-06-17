@@ -17,6 +17,9 @@ namespace CalendarApp.Repositories.Entities
         public string PhoneNumber { get; set; }
         public DateTime BornDate { get; set; }
         public string GroupName { get; set; }
+        public int CalendarId { get; set; }
+        public Boolean IsAdmin { get; set; }
+
 
         private UserDTO _user;
         private SiteUserDTO _siteUser;

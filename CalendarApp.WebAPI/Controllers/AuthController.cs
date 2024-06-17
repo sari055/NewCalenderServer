@@ -88,7 +88,7 @@ namespace CalendarApp.WebAPI.Controllers
             {
                 return BadRequest(new { message = $"מספר תז {request.Tz} כבר קיים במערכת" });
             }
-            await _siteUser.Register(request.SiteUser, request.User, request.Calendar);
+            await _siteUser.Register(request.SiteUser, request.User, request.Calendar, request.IsAdmin, request.CalendarId );
             return Ok();
         }
 
