@@ -6,6 +6,7 @@ using CalendarApp.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CalendarApp.Common.DTOs;
+using System;
 
 
 namespace CalendarApp.Services.Services
@@ -67,10 +68,7 @@ namespace CalendarApp.Services.Services
             return _mapper.Map<SiteUserDTO>(await _siteUser.FindByTzAsync(tz));
         }
 
-
-
-
-        public async Task<SiteUserDTO> Register(SiteUserDTO siteUser, UserDTO user, CalendarDTO calendar)
+        public async Task<SiteUserDTO> Register(SiteUserDTO siteUser, UserDTO user, CalendarDTO calendar, Boolean IsAdmin, int CalendarId)
         {
 
             SiteUserDTO existUser = await FindByTzAsync(siteUser.Tz);
@@ -81,12 +79,12 @@ namespace CalendarApp.Services.Services
             user.SiteUserId = existUser.Id;
             var newUser = await _user.AddAsync(user);
 
-
-
-            calendar.DirectorId = newUser.Id;
-            var newCalendar = await _calendar.AddAsync(calendar);
-
-            await _calendarUser.AddAsync(newUser.Id, newCalendar.Id, UserType.Admin);
+            if (IsAdmin)
+            {
+                calendar.DirectorId = newUser.Id;
+                var newCalendar = await _calendar.AddAsync(calendar);
+                await _calendarUser.AddAsync(newUser.Id, newCalendar.Id, UserType.Admin);
+            } else  await _calendarUser.AddAsync(newUser.Id, CalendarId, UserType.Editor);
             return existUser;
         }
     }
