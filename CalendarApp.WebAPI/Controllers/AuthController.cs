@@ -83,10 +83,10 @@ namespace CalendarApp.WebAPI.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<SiteUserDTO>> Post([FromBody] AuthModel request)
         {
-            var userWithSameTz = await _siteUser.FindByTzAsync(request.Tz);
-            if (userWithSameTz != null)
+            SiteUserDTO userWithSameTzAndPassword = await _siteUser.GetByTzAndPassword(request.Tz, request.Password);
+            if (userWithSameTzAndPassword != null)
             {
-                return BadRequest(new { message = $"מספר תז {request.Tz} כבר קיים במערכת" });
+                return BadRequest(new { message = $"משתמש {request.Tz} כבר קיים במערכת" });
             }
             await _siteUser.Register(request.SiteUser, request.User, request.Calendar, request.IsAdmin, request.CalendarId );
             return Ok();
