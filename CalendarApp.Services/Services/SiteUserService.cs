@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using CalendarApp.Common.DTOs;
 using System;
+using System.Linq;
 
 
 namespace CalendarApp.Services.Services
@@ -60,7 +61,11 @@ namespace CalendarApp.Services.Services
 
         public async Task<SiteUserDTO> GetByTzAndPassword(int tz, string password)
         {
-            return _mapper.Map<SiteUserDTO>(await _siteUser.GetByTzAndPassword(tz, password));
+         //   return _mapper.Map<SiteUserDTO>(await _siteUser.GetByTzAndPassword(tz, password));
+            SiteUserDTO siteUser = _mapper.Map<SiteUserDTO>(await _siteUser.GetByTzAndPassword(tz, password));
+             var calendars = await _calendar.GetCalendarsBySiteUserId(siteUser.Id);
+             siteUser.Calendars = calendars.ToList();
+             return siteUser;
         }
 
         public async Task<SiteUserDTO> FindByTzAsync(int tz)
